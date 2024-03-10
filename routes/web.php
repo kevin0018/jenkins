@@ -22,3 +22,7 @@ Route::get('home', function () {
 Route::get('lista', function() {
     return view('cine.lista_peliculas');
 })->name('cine_lista_peliculas');
+
+Route::get('inicio', function() {
+    return view('cine.inicio');
+})->name('cine_inicio');

@@ -81,10 +81,10 @@
             <nav class="mr-auto">
                 <ul class="nav">
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Inicio</a>
+                        <a href="inicio" class="nav-link">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Lista de Películas</a>
+                        <a href="lista" class="nav-link">Lista de Películas</a>
                     </li>
                 </ul>
             </nav>
