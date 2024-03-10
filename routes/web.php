@@ -13,8 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::redirect('/', '/cine/home');
+Route::redirect('/', 'home');
 
-Route::get('/cine/home', function () {
+Route::get('home', function () {
     return view('cine.home');
 })->name('cine_home');
+
+Route::get('lista', function() {
+    return view('cine.lista_peliculas');
+})->name('cine_lista_peliculas');

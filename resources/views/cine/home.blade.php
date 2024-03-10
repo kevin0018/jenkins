@@ -18,10 +18,10 @@
             tendrá que trabajar en equipo. En el proceso, Po descubrirá que los héroes pueden encontrarse en los lugares más
             inesperados.
         </p>
-        <img src="{{ URL::asset('/img/images.jpeg') }}" alt="peli_img" class="rounded">
+        <img src="{{ URL::asset('/img/home/images.jpeg') }}" alt="peli_img" class="rounded">
     </div>
     <div class="content d-flex py-4">
-        <img src="{{ URL::asset('/img/images2.jpeg') }}" alt="peli2_img" class="rounded">
+        <img src="{{ URL::asset('/img/home/images2.jpeg') }}" alt="peli2_img" class="rounded">
         <p class="p-main-l">
             <span>Migración. Un viaje patas arriba<b></b></span> <br> <br>
 
@@ -44,10 +44,10 @@
             llamarán la atención del "Cartel del Chocolate". La historia de Wonka estará también marcada por su madre y por
             su amistad con un joven huérfano.
         </p>
-        <img src="{{ URL::asset('/img/images3.jpg') }}" alt="peli_img" class="rounded">
+        <img src="{{ URL::asset('/img/home/images3.jpg') }}" alt="peli_img" class="rounded">
     </div>
     <div class="content d-flex py-4">
-        <img src="{{ URL::asset('/img/images4.jpeg') }}" alt="peli2_img" class="rounded">
+        <img src="{{ URL::asset('/img/home/images4.jpeg') }}" alt="peli2_img" class="rounded">
         <p class="p-main-l">
             <span>Avatar la leyenda de Aang<b></b></span> <br> <br>
 
