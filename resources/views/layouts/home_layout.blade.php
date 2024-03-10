@@ -36,6 +36,12 @@
         .content img {
             width: 200px;
         }
+
+        footer a {
+            text-decoration: none;
+            color: black;
+        }
+
     </style>
 </head>
 
@@ -51,7 +57,7 @@
                 </a>
             </div>
             <div>
-                <a href="#" class="btn btn-dark text-warning text-decoration-none text-decoration-none">Log in</a>
+                <a href="#" class="btn btn-dark text-warning text-decoration-none">Log in</a>
             </div>
         </div>
     </header>
@@ -60,6 +66,46 @@
     <main class="mx-auto py-5 text-white" style="width: 80%;">
         @yield('content')
     </main>
+
+    <footer class="bg-warning text-black py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Preguntas frecuentes</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">¿Qué es JenKins?</a></li>
+                        <li><a href="#">Dispositivos compatibles</a></li>
+                        <li><a href="#">Planes y precios</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Centro de ayuda</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Problemas con la cuenta</a></li>
+                        <li><a href="#">Configuración de la  cuenta</a></li>
+                        <li><a href="#">Perfiles</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Contáctanos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">info@jenkins.com</a></li>
+                        <li><a href="#">+34 993302530</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0"><a href="#">Términos de uso</a> | <a href="#">Privacidad</a></p>
+                </div>
+                <div class="col-md-6 text-md-right">
+                    <p class="mb-0">© {{ date('Y') }} Todos los derechos reservados</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
 
 </body>
 

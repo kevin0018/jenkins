@@ -35,7 +35,7 @@
     </div>
     <div class="content d-flex py-2">
         <p class="p-main-r">
-            <span><b>Kung Fu Panda 4</b></span> <br> <br>
+            <span><b>Wonka</b></span> <br> <br>
 
             Fantasía musical sobre Willy Wonka (Timothée Chalamet) antes de convertirse en el mayor fabricante de chocolate
             y caramelos de todo el mundo. Su historia plasma los comienzos vívidos y míticos de un imaginativo joven
@@ -45,5 +45,17 @@
             su amistad con un joven huérfano.
         </p>
         <img src="{{ URL::asset('/img/images3.jpg') }}" alt="peli_img" class="rounded">
+    </div>
+    <div class="content d-flex py-4">
+        <img src="{{ URL::asset('/img/images4.jpeg') }}" alt="peli2_img" class="rounded">
+        <p class="p-main-l">
+            <span>Avatar la leyenda de Aang<b></b></span> <br> <br>
+
+            La serie se centra en el viaje de Aang, de 12 años, el Avatar actual y último superviviente de su nación, los
+            Nómadas del Aire, junto con sus amigos Sokka, Katara y más tarde Toph, mientras se esfuerzan por poner fin a la
+            guerra de la Nación del Fuego contra las otras naciones del mundo. También sigue la historia de Zuko, el
+            príncipe exiliado de la Nación del Fuego, que busca restaurar su honor perdido capturando a Aang, acompañado por
+            su sabio tío Iroh, y más tarde, la de su ambiciosa hermana Azula.
+        </p>
     </div>
 @endsection
