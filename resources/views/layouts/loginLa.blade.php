@@ -21,14 +21,20 @@
             .fas {
                 color: yellow;
             }
-
             main {
-                background-color: rgb(12, 12, 12);
-                box-shadow: 0px 5px 10px rgba(241, 206, 3, 0.8);
-                margin: 0 10%;
-                padding: 20px;
-            }
+    background-image: url('https://i.pinimg.com/originals/10/b1/ba/10b1bad21f79df5f462c1c09f12db6ff.jpg');
+    background-size:cover; /* Para ajustar la imagen al tamaño de la ventana */
+    background-repeat: no-repeat; /* Para evitar que la imagen se repita */
+    background-position: center; /* Centra la imagen de fondo */
+    width: 100% ;
+    height:700px;
+    padding:5%;
+        /* Agregar opacidad */
+ 
+}
 
+
+            
             .with-line {
                 position: relative;
             }
@@ -110,11 +116,12 @@
             </div>
         </div>
     </header>
+    <body>
+        
 
-    <main class="mx-auto py-5 text-white" style="width: 85%;">
+    <main style=" margin:2%;width: 96%;">
         @yield('content')
     </main>
-
     <footer class="bg-warning text-black py-3">
         <div class="container">
             <div class="row">
@@ -153,6 +160,8 @@
             </div>
         </div>
     </footer>
+
+    
 
 </body>
 </html>
