@@ -21,14 +21,21 @@ Route::get('home', function () {
     return view('cine.home');
 })->name('cine_home');
 
-Route::get('lista', function() {
-    return view('cine.lista_peliculas');
-})->name('cine_lista_peliculas');
+Route::get('/cine/login', function () {
+    return view('cine.login');
+})->name('cine_login');
 
-Route::get('inicio', function() {
-    return view('cine.inicio');
-})->name('cine_inicio');
+Route::post('/cine/login', function () {
+    return view('cine.login');
+})->name('cine_loginp');
 
-Route::get('busqueda', [BusquedaController::class, 'buscar'])->name('cine_busqueda');
+Route::post('/cine/pasarelaPago', function () {
+    return view('cine.pasarelaPago');
+})->name('PasarelaPago');
 
-Route::get('reproductor', 'App\Http\Controllers\ReproductorController@index')->name('cine_reproductor');
+Route::get('/cine/registro', function () {
+    return view('cine.registro');
+})->name('cine_registro');
+Route::get('/cine/datosUsuario', function () {
+    return view('cine.datosUsuario');
+})->name('cine_datos');

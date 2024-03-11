@@ -21,14 +21,20 @@
             .fas {
                 color: yellow;
             }
-
             main {
-                background-color: rgb(12, 12, 12);
-                box-shadow: 0px 5px 10px rgba(241, 206, 3, 0.8);
-                margin: 0 10%;
-                padding: 20px;
-            }
+    background-image: url('https://nintenduo.com/wp-content/uploads/2023/05/Posters-FNAF-Pelicula-01.webp');
+    background-size:cover; /* Para ajustar la imagen al tamaño de la ventana */
+    background-repeat: no-repeat; /* Para evitar que la imagen se repita */
+    background-position: center; /* Centra la imagen de fondo */
+    width: 100% ;
+    height:800px;
+    padding:5%;
+        /* Agregar opacidad */
+ 
+}
 
+
+            
             .with-line {
                 position: relative;
             }
@@ -88,17 +94,16 @@
                     </li>
                 </ul>
             </nav>
-            
+            <!-- Buscador -->
             <div class="col-md-3 d-flex align-items-center">
-                <!-- Buscador -->
-                <form class="input-group" action="busqueda" method="GET">
-                    <input type="text" class="form-control" placeholder="Buscar películas..." name="query">
+                <div class="input-group mx-2">
+                    <input type="text" class="form-control" placeholder="Buscar...">
                     <div class="input-group-append">
-                        <button class="btn btn-dark h-100" type="submit">
+                        <button class="btn btn-dark h-100" type="button">
                             <i class="fas fa-search"></i>
                         </button>
                     </div>
-                </form>                
+                </div>
                 <!-- Icono de usuario -->
                 <div class="input-group-prepend mx-2">
                     <button class="btn btn-dark h-100" type="button">
@@ -106,55 +111,17 @@
                     </button>
                 </div>
                 <!-- Logo -->
-                <div class="navbar-header">
-                    {{-- <button type="button" class="navbar-toggle collapsed" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                        <span class="sr-only"></span>
-                        <span class="icon-bar"></span>
-                    </button> --}}
-                    
-                    <a href="/" class="navbar-brand">
-                        <img src="{{URL::asset('/img/Jenkins_logo.png')}}" alt="LogoCine" width="200px">
-                    </a>
-==== BASE ====
-                </div>
-==== BASE ====
-                <!-- Final Logo -->
-
-                <!-- Botones de la derecha -->
-                {{-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> --}}
-                <div class=" navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Peliculas</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Log in</a>
-                        </li>
-                        <li class="nav-item">
-                            <form class="form-inline">
-                                <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="btn-search">
-                                    <div class="input-group-append">
-                                        <button class="btn btn-outline-secondary" type="button" id="btn-search">
-                                            <i class="fas fa-search"></i>
-                                        </button>
-                                    </div>
-                            </form>
-                        </li>
-                    </ul>
-                <!-- Final de los botones -->
-==== BASE ====
+                <img src="{{ URL::asset('/img/Jenkins_logo.png')}}" alt="LogoCine" class="navbar-brand mx-2" width="120px"
+                    style="filter: drop-shadow(0 0 10px rgba(0, 0, 0, .8))">
             </div>
         </div>
     </header>
+    <body>
+        
 
-    <main class="mx-auto py-5 text-white" style="width: 85%;">
+    <main style="width: 100%;">
         @yield('content')
     </main>
-
     <footer class="bg-warning text-black py-3">
         <div class="container">
             <div class="row">
@@ -193,6 +160,8 @@
             </div>
         </div>
     </footer>
+
+    
 
 </body>
 </html>
