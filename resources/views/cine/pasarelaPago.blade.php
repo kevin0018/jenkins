@@ -1,7 +1,7 @@
 @extends('layouts.registroLa')
 @section('title', 'Sign up')
 @section('content')
-<div class="container" style="width: 30%; margin-top: 2%; padding-top: 2%; padding-bottom: 5%; background-color: rgb(246, 167, 0, 0.9); border: 5px groove blue; border-radius: 30px; box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.9);">
+<div class="container" style=" min-width:300px;width: 30%; margin-top: 2%; padding-top: 2%; padding-bottom: 5%; background-color: rgb(246, 167, 0, 0.9); border: 5px groove blue; border-radius: 30px; box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.9);">
     <!-- Contenido de tu contenedor -->
     <h1 class="text-dark mb-4 text-center"><strong>PAYMENT</strong></h1>
     <div class="row justify-content-center">

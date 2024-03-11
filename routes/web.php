@@ -15,8 +15,14 @@ use App\Http\Controllers\BusquedaController;
 |
 */
 
+//HOME PÁGINA PRINCIPAL 
 Route::redirect('/', 'home');
 
+Route::get('home', function () {
+    return view('cine.home');
+})->name('cine_home');
+
+//INICIO
 Route::get('inicio', function() {
     return view('cine.inicio');
 })->name('cine_inicio');
@@ -25,18 +31,8 @@ Route::post('inicio', function() {
     return view('cine.inicio');
 })->name('cine_inicio_p');
 
-Route::get('busqueda', [BusquedaController::class, 'buscar'])->name('cine_busqueda');
 
-Route::get('reproductor', 'App\Http\Controllers\ReproductorController@index')->name('cine_reproductor');
-
-Route::get('lista', function() {
-    return view('cine.lista_peliculas');
-})->name('cine_lista_peliculas');
-
-Route::get('home', function () {
-    return view('cine.home');
-})->name('cine_home');
-
+//LOGIN
 Route::get('login', function () {
     return view('cine.login');
 })->name('cine_login');
@@ -45,10 +41,7 @@ Route::post('login', function () {
     return view('cine.login');
 })->name('cine_login_p');
 
-Route::post('pasarelaPago', function () {
-    return view('cine.pasarelaPago');
-})->name('cine_pasarelaPago');
-
+//REGISTRO
 Route::get('registro', function () {
     return view('cine.registro');
 })->name('cine_registro');
@@ -56,3 +49,31 @@ Route::get('registro', function () {
 Route::get('datosUsuario', function () {
     return view('cine.datosUsuario');
 })->name('cine_datos');
+
+//BUSQUEDA
+
+Route::get('busqueda', [BusquedaController::class, 'buscar'])->name('cine_busqueda');
+
+Route::get('reproductor', 'App\Http\Controllers\ReproductorController@index')->name('cine_reproductor');
+
+//LISTA PELICULAS
+Route::get('lista', function() {
+    return view('cine.lista_peliculas');
+})->name('cine_lista_peliculas');
+
+
+//PASARELA DE PAGO
+Route::post('pasarelaPago', function () {
+    return view('cine.pasarelaPago');
+})->name('cine_pasarelaPago');
+
+
+//SUSCRIPCIONES
+Route::get('suscriptions', function () {
+    return view('cine.suscriptions');
+})->name('cine_suscriptions');
+
+
+
+
+
