@@ -8,7 +8,7 @@
         <!-- Cuatro campos en la izquierda -->
         <div class="col-md-6 form-container">
             <!-- Formulario de registro -->
-            <form action="/cine/pasarelaPago" method="POST">
+            <form action="{{ route('cine_pasarelaPago') }}" method="POST">
                 @csrf
                 <!-- Nombre -->
                 <div class="form-outline mb-2">

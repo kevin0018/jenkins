@@ -62,7 +62,7 @@
                 </a>
             </div>
             <div>
-                <a href="#" class="btn btn-dark text-warning text-decoration-none">Log in</a>
+                <a href="login" class="btn btn-dark text-warning text-decoration-none">Log in</a>
             </div>
         </div>
     </header>

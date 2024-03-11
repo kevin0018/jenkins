@@ -17,25 +17,42 @@ use App\Http\Controllers\BusquedaController;
 
 Route::redirect('/', 'home');
 
+Route::get('inicio', function() {
+    return view('cine.inicio');
+})->name('cine_inicio');
+
+Route::post('inicio', function() {
+    return view('cine.inicio');
+})->name('cine_inicio_p');
+
+Route::get('busqueda', [BusquedaController::class, 'buscar'])->name('cine_busqueda');
+
+Route::get('reproductor', 'App\Http\Controllers\ReproductorController@index')->name('cine_reproductor');
+
+Route::get('lista', function() {
+    return view('cine.lista_peliculas');
+})->name('cine_lista_peliculas');
+
 Route::get('home', function () {
     return view('cine.home');
 })->name('cine_home');
 
-Route::get('/cine/login', function () {
+Route::get('login', function () {
     return view('cine.login');
 })->name('cine_login');
 
-Route::post('/cine/login', function () {
+Route::post('login', function () {
     return view('cine.login');
-})->name('cine_loginp');
+})->name('cine_login_p');
 
-Route::post('/cine/pasarelaPago', function () {
+Route::post('pasarelaPago', function () {
     return view('cine.pasarelaPago');
-})->name('PasarelaPago');
+})->name('cine_pasarelaPago');
 
-Route::get('/cine/registro', function () {
+Route::get('registro', function () {
     return view('cine.registro');
 })->name('cine_registro');
-Route::get('/cine/datosUsuario', function () {
+
+Route::get('datosUsuario', function () {
     return view('cine.datosUsuario');
 })->name('cine_datos');

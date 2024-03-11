@@ -7,7 +7,7 @@
     <div class="row justify-content-center">
         <div class="col-md-6 form-container">
             <!-- Email input -->
-            <form action="/lista_peliculas" method="POST">
+            <form action="{{ route('cine_inicio_p') }}" method="POST">
                 @csrf
                 <div class="form-outline mb-4">
                     <input type="email" id="loginName" style="background-color:#FFFACD" name="loginName" class="form-control" placeholder="Username or email">
@@ -26,7 +26,7 @@
                     <!-- Checkbox -->
                     <!-- Simple link -->
                     <a href="/Check"><strong>Forget your password?</strong></a>
-                    <p class="mb-0 text-dark"><strong>New to Jenkins?</strong> <a href="/cine/registro"><strong>Sign up now!</strong></a></p>
+                    <p class="mb-0 text-dark"><strong>New to Jenkins?</strong> <a href="{{ route('cine_registro') }}"><strong>Sign up now!</strong></a></p>
                 </div>
             </div>
         </div>

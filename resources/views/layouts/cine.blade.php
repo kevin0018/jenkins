@@ -89,7 +89,7 @@
                 </ul>
             </nav>
             
-            <div class="col-md-3 d-flex align-items-center">
+            <div class="d-flex align-items-center">
                 <!-- Buscador -->
                 <form class="input-group" action="busqueda" method="GET">
                     <input type="text" class="form-control" placeholder="Buscar películas..." name="query">
@@ -102,51 +102,12 @@
                 <!-- Icono de usuario -->
                 <div class="input-group-prepend mx-2">
                     <button class="btn btn-dark h-100" type="button">
-                        <i class="fas fa-user"></i>
+                        <a href="{{ route('cine_datos') }}"><i class="fas fa-user"></i></a>
                     </button>
                 </div>
                 <!-- Logo -->
-                <div class="navbar-header">
-                    {{-- <button type="button" class="navbar-toggle collapsed" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                        <span class="sr-only"></span>
-                        <span class="icon-bar"></span>
-                    </button> --}}
-                    
-                    <a href="/" class="navbar-brand">
-                        <img src="{{URL::asset('/img/Jenkins_logo.png')}}" alt="LogoCine" width="200px">
-                    </a>
-==== BASE ====
-                </div>
-==== BASE ====
-                <!-- Final Logo -->
-
-                <!-- Botones de la derecha -->
-                {{-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> --}}
-                <div class=" navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Peliculas</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Log in</a>
-                        </li>
-                        <li class="nav-item">
-                            <form class="form-inline">
-                                <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="btn-search">
-                                    <div class="input-group-append">
-                                        <button class="btn btn-outline-secondary" type="button" id="btn-search">
-                                            <i class="fas fa-search"></i>
-                                        </button>
-                                    </div>
-                            </form>
-                        </li>
-                    </ul>
-                <!-- Final de los botones -->
-==== BASE ====
+                <img src="{{ URL::asset('/img/Jenkins_logo.png')}}" alt="LogoCine" class="navbar-brand mx-2" width="120px"
+                    style="filter: drop-shadow(0 0 10px rgba(0, 0, 0, .8))">
             </div>
         </div>
     </header>

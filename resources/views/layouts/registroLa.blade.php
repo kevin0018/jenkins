@@ -22,16 +22,15 @@
                 color: yellow;
             }
             main {
-    background-image: url('https://nintenduo.com/wp-content/uploads/2023/05/Posters-FNAF-Pelicula-01.webp');
-    background-size:cover; /* Para ajustar la imagen al tamaño de la ventana */
-    background-repeat: no-repeat; /* Para evitar que la imagen se repita */
-    background-position: center; /* Centra la imagen de fondo */
-    width: 100% ;
-    height:800px;
-    padding:5%;
-        /* Agregar opacidad */
- 
-}
+                background-image: url('https://nintenduo.com/wp-content/uploads/2023/05/Posters-FNAF-Pelicula-01.webp');
+                background-size:cover; /* Para ajustar la imagen al tamaño de la ventana */
+                background-repeat: no-repeat; /* Para evitar que la imagen se repita */
+                background-position: center; /* Centra la imagen de fondo */
+                width: 100% ;
+                height:900px;
+                padding:5%;
+                    /* Agregar opacidad */
+            }
 
 
             
@@ -79,7 +78,6 @@
     </head>
 <body class="font-sans antialiased bg-dark text-white">
 
-
     <!-- Menu -->
     <header class="bg-warning text-dark py-3">
         <div class=" d-flex justify-content-between align-items-center mx-auto" style="width: 85%;">
@@ -94,16 +92,17 @@
                     </li>
                 </ul>
             </nav>
-            <!-- Buscador -->
-            <div class="col-md-3 d-flex align-items-center">
-                <div class="input-group mx-2">
-                    <input type="text" class="form-control" placeholder="Buscar...">
+            
+            <div class="d-flex align-items-center">
+                <!-- Buscador -->
+                <form class="input-group" action="busqueda" method="GET">
+                    <input type="text" class="form-control" placeholder="Buscar películas..." name="query">
                     <div class="input-group-append">
-                        <button class="btn btn-dark h-100" type="button">
+                        <button class="btn btn-dark h-100" type="submit">
                             <i class="fas fa-search"></i>
                         </button>
                     </div>
-                </div>
+                </form>                
                 <!-- Icono de usuario -->
                 <div class="input-group-prepend mx-2">
                     <button class="btn btn-dark h-100" type="button">
@@ -116,7 +115,6 @@
             </div>
         </div>
     </header>
-    <body>
         
 
     <main style="width: 100%;">

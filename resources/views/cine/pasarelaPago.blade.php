@@ -8,7 +8,7 @@
         <!-- Tres campos en la izquierda -->
         <div class="col-md-6 form-container">
             <!-- Formulario de registro -->
-            <form action="/cine/login" method="POST">
+            <form action="{{ route('cine_login_p') }}" method="POST">
                 @csrf
                 <div class="form-check mb-2">
                     <input class="form-check-input" type="radio" name="paymentMethod" id="paymentMethod1" value="Paypal">
