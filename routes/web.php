@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ReproductorController;
+use App\Http\Controllers\BusquedaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,3 +28,7 @@ Route::get('lista', function() {
 Route::get('inicio', function() {
     return view('cine.inicio');
 })->name('cine_inicio');
+
+Route::get('busqueda', [BusquedaController::class, 'buscar'])->name('cine_busqueda');
+
+Route::get('reproductor', 'App\Http\Controllers\ReproductorController@index')->name('cine_reproductor');

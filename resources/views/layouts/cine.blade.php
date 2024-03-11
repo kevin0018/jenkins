@@ -88,16 +88,17 @@
                     </li>
                 </ul>
             </nav>
-            <!-- Buscador -->
+            
             <div class="col-md-3 d-flex align-items-center">
-                <div class="input-group mx-2">
-                    <input type="text" class="form-control" placeholder="Buscar...">
+                <!-- Buscador -->
+                <form class="input-group" action="busqueda" method="GET">
+                    <input type="text" class="form-control" placeholder="Buscar películas..." name="query">
                     <div class="input-group-append">
-                        <button class="btn btn-dark h-100" type="button">
+                        <button class="btn btn-dark h-100" type="submit">
                             <i class="fas fa-search"></i>
                         </button>
                     </div>
-                </div>
+                </form>                
                 <!-- Icono de usuario -->
                 <div class="input-group-prepend mx-2">
                     <button class="btn btn-dark h-100" type="button">
