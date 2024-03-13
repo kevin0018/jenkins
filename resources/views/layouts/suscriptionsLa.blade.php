@@ -11,40 +11,48 @@
         <style>
             .neon-container {
   display: flex;
-  justify-content: space-around;
+  font-size:20px;
 }
 
-.neon {
-  width: 100px;
-  height: 100px;
-  border: 2px solid transparent;
+.neon1 {
+    background-color:rgba(100,0,300,0.3);
+    padding:5px;
+    margin:10px;
+    width: 100%;
+  height: auto;
+  border: 2px solid violet;
   border-radius: 10px;
   position: relative;
+  box-shadow: 0 0 10px violet;
 }
 
-.neon::before {
+.neon2 {
+    background-color:rgba(0,300,0,0.2);
+    margin:10px;
+    padding:5px;
 
-  position: absolute;
-  top: -5px;
-  left: -5px;
-  right: -5px;
-  bottom: -5px;
+    width: 100%;
+    height: auto;
+  border: 2px solid green;
   border-radius: 10px;
-  background: linear-gradient(45deg, #ff00ff, #00ff00, #00ffff, #ffff00);
-  z-index: -1;
-  animation: neon-border 1.5s ease-in-out infinite alternate;
+  position: relative;
+  box-shadow: 0 0 10px green;
+}
+.neon3 {
+    background-color:rgba(0,0,200,0.2);
+
+    margin:10px;
+    padding:5px;
+
+  width: 100%;
+  height: auto;
+  border: 2px solid blue;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 0 10px black;
 }
 
-@keyframes neon-border {
-  0% {
-    opacity: 0.5;
-    filter: blur(5px);
-  }
-  100% {
-    opacity: 1;
-    filter: blur(15px);
-  }
-}
+
 
             .nav-link {
                 color: black;
@@ -58,12 +66,10 @@
                 color: yellow;
             }
             main {
-                background-image: url('https://i.pinimg.com/originals/10/b1/ba/10b1bad21f79df5f462c1c09f12db6ff.jpg');
-                background-size:cover; /* Para ajustar la imagen al tamaño de la ventana */
-                background-repeat: no-repeat; /* Para evitar que la imagen se repita */
-                background-position: center; /* Centra la imagen de fondo */
+
+                background-color:BLACK;              *
                 width: 100% ;
-                height:700px;
+                height:auto;
                 padding:5%;
                     /* Agregar opacidad */
             
