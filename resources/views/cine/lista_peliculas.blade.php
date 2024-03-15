@@ -1,84 +1,84 @@
 @extends('layouts.cine')
-@section('title', 'Lista peliculas')
+@section('title', 'Movie List')
 @section('content')
 
-    <h2 class="with-line">PELICULAS EN TENDENCIA</h2>
-    <div class="content d-flex py-2 lista-pelis">
+    <h2 class="with-line">TRENDING MOVIES</h2>
+    <div class="content d-flex py-2 movie-list">
         <a href="">
-            <img src="{{ URL::asset('/img/lista_pelis/padrino.jpeg')}}" alt="el_padrino">
-            <p>El padrino</p>
+            <img src="{{ URL::asset('/img/movie_list/godfather.jpeg')}}" alt="the_godfather">
+            <p>The Godfather</p>
         </a>
         <a href="">
-            <img src="{{ URL::asset('/img/lista_pelis/padrino.jpeg')}}" alt="el_padrino">
-            <p>El padrino</p>
+            <img src="{{ URL::asset('/img/movie_list/godfather.jpeg')}}" alt="the_godfather">
+            <p>The Godfather</p>
         </a>
         <a href="">
-            <img src="{{ URL::asset('/img/lista_pelis/padrino.jpeg')}}" alt="el_padrino">
-            <p>El padrino</p>
+            <img src="{{ URL::asset('/img/movie_list/godfather.jpeg')}}" alt="the_godfather">
+            <p>The Godfather</p>
         </a>
         <a href="">
-            <img src="{{ URL::asset('/img/lista_pelis/padrino.jpeg')}}" alt="el_padrino">
-            <p>El padrino</p>
+            <img src="{{ URL::asset('/img/movie_list/godfather.jpeg')}}" alt="the_godfather">
+            <p>The Godfather</p>
         </a>
     </div>
 
-    <h2 class="with-line">ULTIMOS LANZAMIENTOS</h2>
-    <div class="content d-flex py-2 lista-pelis">
+    <h2 class="with-line">LATEST RELEASES</h2>
+    <div class="content d-flex py-2 movie-list">
         <a href="">
-            <img src="{{ URL::asset('/img/lista_pelis/padrino.jpeg')}}" alt="el_padrino">
-            <p>El padrino</p>
+            <img src="{{ URL::asset('/img/movie_list/godfather.jpeg')}}" alt="the_godfather">
+            <p>The Godfather</p>
         </a>
         <a href="">
-            <img src="{{ URL::asset('/img/lista_pelis/padrino.jpeg')}}" alt="el_padrino">
-            <p>El padrino</p>
+            <img src="{{ URL::asset('/img/movie_list/godfather.jpeg')}}" alt="the_godfather">
+            <p>The Godfather</p>
         </a>
         <a href="">
-            <img src="{{ URL::asset('/img/lista_pelis/padrino.jpeg')}}" alt="el_padrino">
-            <p>El padrino</p>
+            <img src="{{ URL::asset('/img/movie_list/godfather.jpeg')}}" alt="the_godfather">
+            <p>The Godfather</p>
         </a>
         <a href="">
-            <img src="{{ URL::asset('/img/lista_pelis/padrino.jpeg')}}" alt="el_padrino">
-            <p>El padrino</p>
+            <img src="{{ URL::asset('/img/movie_list/godfather.jpeg')}}" alt="the_godfather">
+            <p>The Godfather</p>
         </a>
     </div>
 
     <h2 class="with-line">DRAMA</h2>
-    <div class="content d-flex py-2 lista-pelis">
+    <div class="content d-flex py-2 movie-list">
         <a href="">
-            <img src="{{ URL::asset('/img/lista_pelis/padrino.jpeg')}}" alt="el_padrino">
-            <p>El padrino</p>
+            <img src="{{ URL::asset('/img/movie_list/godfather.jpeg')}}" alt="the_godfather">
+            <p>The Godfather</p>
         </a>
         <a href="">
-            <img src="{{ URL::asset('/img/lista_pelis/padrino.jpeg')}}" alt="el_padrino">
-            <p>El padrino</p>
+            <img src="{{ URL::asset('/img/movie_list/godfather.jpeg')}}" alt="the_godfather">
+            <p>The Godfather</p>
         </a>
         <a href="">
-            <img src="{{ URL::asset('/img/lista_pelis/padrino.jpeg')}}" alt="el_padrino">
-            <p>El padrino</p>
+            <img src="{{ URL::asset('/img/movie_list/godfather.jpeg')}}" alt="the_godfather">
+            <p>The Godfather</p>
         </a>
         <a href="">
-            <img src="{{ URL::asset('/img/lista_pelis/padrino.jpeg')}}" alt="el_padrino">
-            <p>El padrino</p>
+            <img src="{{ URL::asset('/img/movie_list/godfather.jpeg')}}" alt="the_godfather">
+            <p>The Godfather</p>
         </a>
     </div>
 
-    <h2 class="with-line">TERROR</h2>
-    <div class="content d-flex py-2 lista-pelis">
+    <h2 class="with-line">HORROR</h2>
+    <div class="content d-flex py-2 movie-list">
         <a href="">
-            <img src="{{ URL::asset('/img/lista_pelis/padrino.jpeg')}}" alt="el_padrino">
-            <p>El padrino</p>
+            <img src="{{ URL::asset('/img/movie_list/godfather.jpeg')}}" alt="the_godfather">
+            <p>The Godfather</p>
         </a>
         <a href="">
-            <img src="{{ URL::asset('/img/lista_pelis/padrino.jpeg')}}" alt="el_padrino">
-            <p>El padrino</p>
+            <img src="{{ URL::asset('/img/movie_list/godfather.jpeg')}}" alt="the_godfather">
+            <p>The Godfather</p>
         </a>
         <a href="">
-            <img src="{{ URL::asset('/img/lista_pelis/padrino.jpeg')}}" alt="el_padrino">
-            <p>El padrino</p>
+            <img src="{{ URL::asset('/img/movie_list/godfather.jpeg')}}" alt="the_godfather">
+            <p>The Godfather</p>
         </a>
         <a href="">
-            <img src="{{ URL::asset('/img/lista_pelis/padrino.jpeg')}}" alt="el_padrino">
-            <p>El padrino</p>
+            <img src="{{ URL::asset('/img/movie_list/godfather.jpeg')}}" alt="the_godfather">
+            <p>The Godfather</p>
         </a>
     </div>
 

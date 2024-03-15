@@ -23,13 +23,13 @@ Route::get('home', function () {
 })->name('cine_home');
 
 //INICIO
-Route::get('inicio', function() {
+Route::get('home', function() {
     return view('cine.inicio');
-})->name('cine_inicio');
+})->name('cine_home_user');
 
-Route::post('inicio', function() {
+Route::post('home', function() {
     return view('cine.inicio');
-})->name('cine_inicio_p');
+})->name('cine_home_p');
 
 
 //LOGIN
@@ -46,9 +46,9 @@ Route::get('registro', function () {
     return view('cine.registro');
 })->name('cine_registro');
 
-Route::get('datosUsuario', function () {
+Route::get('userData', function () {
     return view('cine.datosUsuario');
-})->name('cine_datos');
+})->name('cine_user_data');
 
 //BUSQUEDA
 
@@ -57,7 +57,7 @@ Route::get('busqueda', [BusquedaController::class, 'buscar'])->name('cine_busque
 Route::get('reproductor', 'App\Http\Controllers\ReproductorController@index')->name('cine_reproductor');
 
 //LISTA PELICULAS
-Route::get('lista', function() {
+Route::get('list', function() {
     return view('cine.lista_peliculas');
 })->name('cine_lista_peliculas');
 
@@ -72,6 +72,11 @@ Route::post('pasarelaPago', function () {
 Route::get('suscriptions', function () {
     return view('cine.suscriptions');
 })->name('cine_suscriptions');
+
+//Terminos y Privacidad
+Route::get('termsofuse', function() {
+    return view('cine.terminos_de_uso');
+})->name('cine_terms_of_use');
 
 
 
