@@ -16,9 +16,9 @@ use App\Http\Controllers\BusquedaController;
 */
 
 //HOME PÁGINA PRINCIPAL 
-Route::redirect('/', 'home');
+Route::redirect('/', 'Jenkins');
 
-Route::get('home', function () {
+Route::get('Jenkins', function () {
     return view('cine.home');
 })->name('cine_home');
 

@@ -76,23 +76,23 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h5>Preguntas frecuentes</h5>
+                    <h5>Frequently Asked Questions</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#">¿Qué es JenKins?</a></li>
-                        <li><a href="#">Dispositivos compatibles</a></li>
-                        <li><a href="#">Planes y precios</a></li>
+                        <li><a href="#">What is Jenkins?</a></li>
+                        <li><a href="#">Compatible Devices</a></li>
+                        <li><a href="#">Plans and Pricing</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3">
-                    <h5>Centro de ayuda</h5>
+                    <h5>Help Center</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#">Problemas con la cuenta</a></li>
-                        <li><a href="#">Configuración de la  cuenta</a></li>
-                        <li><a href="#">Perfiles</a></li>
+                        <li><a href="#">Account Issues</a></li>
+                        <li><a href="#">Account Settings</a></li>
+                        <li><a href="#">Profiles</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3">
-                    <h5>Contáctanos</h5>
+                    <h5>Contact Us</h5>
                     <ul class="list-unstyled">
                         <li><a href="#">info@jenkins.com</a></li>
                         <li><a href="#">+34 993302530</a></li>
@@ -102,10 +102,10 @@
             <hr>
             <div class="row">
                 <div class="col-md-6">
-                    <p class="mb-0"><a href="#">Términos de uso</a> | <a href="#">Privacidad</a></p>
+                    <p class="mb-0"><a href="#">Terms of Use</a> | <a href="#">Privacy Policy</a></p>
                 </div>
                 <div class="col-md-6 text-md-right">
-                    <p class="mb-0">© {{ date('Y') }} Todos los derechos reservados</p>
+                    <p class="mb-0">© {{ date('Y') }} All rights reserved</p>
                 </div>
             </div>
         </div>

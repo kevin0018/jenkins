@@ -1,161 +1,118 @@
+<!DOCTYPE html>
 <html lang="es">
-    <head>
-        <title>
-            @yield('title')
-        </title>
-        
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@yield('title')</title>
+    
+    <!-- Aquí van tus enlaces a los archivos CSS y JS -->
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-        <link rel="icon" type="image/png" href="{{"img/Jenkins_logo.png"}}">
+    <!-- Agrega el icono del sitio -->
+    <link rel="icon" type="image/png" href="{{"img/Jenkins_logo.png"}}">
 
-        <style>
+    <!-- Estilos personalizados -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('https://i.pinimg.com/originals/10/b1/ba/10b1bad21f79df5f462c1c09f12db6ff.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
 
-            .nav-link {
-                color: black;
-            }
 
-            .nav-link:hover {
-                color: white;
-            }
+        header {
+            background-color: rgba(255, 204, 0, 0.5); /* Color de fondo con transparencia */
+            color: #050505;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            position: fixed; /* Para fijar el encabezado en la parte superior */
+            top: 0; /* Fijar el encabezado en la parte superior */
+            z-index: 1000; /* Asegurar que el encabezado esté sobre otros elementos */
+        }
 
-            .fas {
-                color: yellow;
-            }
-            main {
-                background-image: url('https://i.pinimg.com/originals/10/b1/ba/10b1bad21f79df5f462c1c09f12db6ff.jpg');
-                background-size:cover; /* Para ajustar la imagen al tamaño de la ventana */
-                background-repeat: no-repeat; /* Para evitar que la imagen se repita */
-                background-position: center; /* Centra la imagen de fondo */
-                width: 100% ;
-                height:700px;
-                padding:5%;
-                    /* Agregar opacidad */
-            
-            }
-            
-            .with-line {
-                position: relative;
-            }
+        main {
+            margin: 2%;
+            padding: 5%;
+            color: #fff; /* Color de texto blanco para mayor contraste */
+            margin-top: 80px; /* Ajustar el espacio para evitar que el contenido se solape con el encabezado fijo */
+        }
 
-            .with-line::after {
-                content: '';
-                position: absolute;
-                left: 0;
-                bottom: -5px; 
-                width: 100%;
-                height: 2px; 
-                background: linear-gradient(to right, rgba(255, 255, 255, 0), #fff, rgba(255, 255, 255, 0));
-            }
+        footer {
+            background-color: rgba(255, 204, 0, 0.5); /* Color de fondo con transparencia */
+            color: #050505;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+            position: fixed; /* Para fijar el pie de página en la parte inferior */
+            bottom: 0; /* Fijar el pie de página en la parte inferior */
+            z-index: 1000; /* Asegurar que el pie de página esté sobre otros elementos */
+        }
 
-            .lista-pelis a img {
-                width: 200px;
-            }
+        footer a {
+            text-decoration: none;
+            color: black;
+        }
 
-            .lista-pelis a {
-                margin-top: 5px;
-                margin-left: 5%;
-                font-size: 14px;
-                text-align: center;
-                text-decoration: none;
-                color: white;
-            }
+        footer li a {
+            color: rgb(17, 17, 17);
+        }
 
-            .lista-pelis {
-                margin-right: 20px;
-            }
-
-            footer a {
-                text-decoration: none;
-                color: black;
-            }
-
-            footer li a {
-                color: rgb(17, 17, 17);
-            }
-        </style>
-    </head>
+    </style>
+</head>
 <body class="font-sans antialiased bg-dark text-white">
-
-
-    <!-- Menu -->
-    <header class="bg-warning text-dark py-3">
-        <div class=" d-flex justify-content-between align-items-center mx-auto" style="width: 85%;">
-            <!-- Menú de navegación -->
-            <nav class="mr-auto">
-                <ul class="nav">
-                    <li class="nav-item">
-                        <a href="inicio" class="nav-link">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="lista" class="nav-link">Lista de Películas</a>
-                    </li>
-                </ul>
-            </nav>
-            
-            <div class="d-flex align-items-center">
-                <!-- Buscador -->
-                <form class="input-group" action="busqueda" method="GET">
-                    <input type="text" class="form-control" placeholder="Buscar películas..." name="query">
-                    <div class="input-group-append">
-                        <button class="btn btn-dark h-100" type="submit">
-                            <i class="fas fa-search"></i>
-                        </button>
-                    </div>
-                </form>                
-                <!-- Icono de usuario -->
-                <div class="input-group-prepend mx-2">
-                    <button class="btn btn-dark h-100" type="button">
-                        <i class="fas fa-user"></i>
-                    </button>
-                </div>
-                <!-- Logo -->
-                <img src="{{ URL::asset('/img/Jenkins_logo.png')}}" alt="LogoCine" class="navbar-brand mx-2" width="120px"
-                    style="filter: drop-shadow(0 0 10px rgba(0, 0, 0, .8))">
-            </div>
-        </div>
-    </header>
+        <!-- Encabezado -->
+        <header>
+            <img src="{{ URL::asset('/img/Jenkins_logo.png')}}" alt="LogoCine" width="120px" style="filter: drop-shadow(0 0 10px rgba(0, 0, 0, .8))">
+        </header>
         
+        <!-- Contenido principal -->
+        <main>
+            @yield('content')
+        </main>
 
-    <main style=" margin:2%;width: 96%;">
-        @yield('content')
-    </main>
-    <footer class="bg-warning text-black py-3">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h5>Preguntas frecuentes</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#">¿Qué es JenKins?</a></li>
-                        <li><a href="#">Dispositivos compatibles</a></li>
-                        <li><a href="#">Planes y precios</a></li>
-                    </ul>
+        <!-- Pie de página -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5>Frequently Asked Questions</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">What is Jenkins?</a></li>
+                            <li><a href="#">Compatible Devices</a></li>
+                            <li><a href="#">Plans and Pricing</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h5>Help Center</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Account Issues</a></li>
+                            <li><a href="#">Account Settings</a></li>
+                            <li><a href="#">Profiles</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h5>Contact Us</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">info@jenkins.com</a></li>
+                            <li><a href="#">+34 993302530</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="col-md-3">
-                    <h5>Centro de ayuda</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#">Problemas con la cuenta</a></li>
-                        <li><a href="#">Configuración de la  cuenta</a></li>
-                        <li><a href="#">Perfiles</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3">
-                    <h5>Contáctanos</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#">info@jenkins.com</a></li>
-                        <li><a href="#">+34 993302530</a></li>
-                    </ul>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="mb-0"><a href="#">Terms of Use</a> | <a href="#">Privacy Policy</a></p>
+                    </div>
+                    <div class="col-md-6 text-md-right">
+                        <p class="mb-0">© {{ date('Y') }} All rights reserved</p>
+                    </div>
                 </div>
             </div>
-            <hr>
-            <div class="row">
-                <div class="col-md-6">
-                    <p class="mb-0"><a href="#">Términos de uso</a> | <a href="#">Privacidad</a></p>
-                </div>
-                <div class="col-md-6 text-md-right">
-                    <p class="mb-0">© {{ date('Y') }} Todos los derechos reservados</p>
-                </div>
-            </div>
-        </div>
-    </footer>
+        </footer>
 </body>
 </html>

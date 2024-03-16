@@ -1,13 +1,13 @@
 @extends('layouts.loginLa ')
 @section('title', 'Sign in')
 @section('content')
-<div class="container" style="min-width:300px;width: 30%; margin-top: 2%; padding-top: 2%; padding-bottom: 5%; background-color: rgb(246, 167, 0, 0.9); border: 5px groove blue; border-radius: 30px; box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.9);">
+<div class="container" style="min-width:300px;width: 30%; margin-top: 2%; padding-top: 2%; padding-bottom: 4%; background-color: rgb(246, 167, 0, 0.9); border: 5px groove blue; border-radius: 30px; box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.9);">
     <!-- Contenido de tu contenedor -->
     <h1 class="text-dark mb-4 text-center"><strong>SIGN IN</strong></h1>
     <div class="row justify-content-center">
         <div class="col-md-6 form-container">
             <!-- Email input -->
-            <form action="{{ route('cine_inicio_p') }}" method="POST">
+            <form action="{{ route('cine_home_p') }}" method="POST">
                 @csrf
                 <div class="form-outline mb-4">
                     <input type="email" id="loginName" style="background-color:#FFFACD" name="loginName" class="form-control" placeholder="Username or email">
