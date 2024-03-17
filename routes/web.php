@@ -52,7 +52,7 @@ Route::get('userData', function () {
 
 //BUSQUEDA
 
-Route::get('busqueda', [BusquedaController::class, 'buscar'])->name('cine_busqueda');
+Route::get('search', [BusquedaController::class, 'buscar'])->name('cine_busqueda');
 
 Route::get('reproductor', 'App\Http\Controllers\ReproductorController@index')->name('cine_reproductor');
 

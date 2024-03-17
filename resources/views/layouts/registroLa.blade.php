@@ -81,41 +81,40 @@
     <!-- Menu -->
     <header class="bg-warning text-dark py-3">
         <div class=" d-flex justify-content-between align-items-center mx-auto" style="width: 85%;">
-            <!-- Menú de navegación -->
+            <!-- Navigation Menu -->
             <nav class="mr-auto">
                 <ul class="nav">
                     <li class="nav-item">
-                        <a href="inicio" class="nav-link">Inicio</a>
+                        <a href="{{ route('cine_home_user') }}" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="lista" class="nav-link">Lista de Películas</a>
+                        <a href="{{ route('cine_lista_peliculas') }}" class="nav-link">Movie List</a>
                     </li>
                 </ul>
             </nav>
-            
+
             <div class="d-flex align-items-center">
-                <!-- Buscador -->
-                <form class="input-group" action="busqueda" method="GET">
-                    <input type="text" class="form-control" placeholder="Buscar películas..." name="query">
+                <!-- Search Form -->
+                <form class="input-group" action="search" method="GET">
+                    <input type="text" class="form-control" placeholder="Search movies..." name="query">
                     <div class="input-group-append">
                         <button class="btn btn-dark h-100" type="submit">
                             <i class="fas fa-search"></i>
                         </button>
                     </div>
-                </form>                
-                <!-- Icono de usuario -->
+                </form>
+                <!-- User Icon -->
                 <div class="input-group-prepend mx-2">
                     <button class="btn btn-dark h-100" type="button">
-                        <i class="fas fa-user"></i>
+                        <a href="{{ route('cine_user_data') }}"><i class="fas fa-user"></i></a>
                     </button>
                 </div>
                 <!-- Logo -->
-                <img src="{{ URL::asset('/img/Jenkins_logo.png')}}" alt="LogoCine" class="navbar-brand mx-2" width="120px"
-                    style="filter: drop-shadow(0 0 10px rgba(0, 0, 0, .8))">
+                <img src="{{ URL::asset('/img/Jenkins_logo.png') }}" alt="LogoCine" class="navbar-brand mx-2"
+                    width="120px" style="filter: drop-shadow(0 0 10px rgba(0, 0, 0, .8))">
             </div>
         </div>
     </header>
-        
 
     <main style="width: 100%;">
         @yield('content')

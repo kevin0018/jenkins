@@ -10,31 +10,31 @@
         
     @else
             <h2 class="with-line">Resultados de {{$resultados}}:</h2>
-                <div class="content d-flex py-2 lista-pelis">
-                    <a href="{{ route('cine_reproductor', ['data-pelicula' => 'El padrino']) }}" data-pelicula="El padrino">
-                        <img src="{{ asset('/img/lista_pelis/padrino.jpeg')}}" alt="el_padrino">
-                        <p>El padrino</p>
+                <div class="content d-flex py-2 movie-list">
+                    <a href="{{ route('cine_reproductor', ['data-pelicula' => 'Godfather']) }}" data-pelicula="Godfather">
+                        <img src="{{ asset('/img/movie_poster/godfather.jpeg')}}" alt="Godfather">
+                        <p>Godfather</p>
                     </a>
                 </div>
                 
             
                 <h2 class="with-line">Similares: </h2>
-                <div class="content d-flex py-2 lista-pelis">
+                <div class="content d-flex py-2 movie-list">
                     <a href="">
-                        <img src="{{ URL::asset('/img/lista_pelis/padrino.jpeg')}}" alt="el_padrino">
-                        <p>El padrino</p>
+                        <img src="{{ URL::asset('/img/movie_poster/godfather.jpeg')}}" alt="Godfather">
+                        <p>Godfather</p>
                     </a>
                     <a href="">
-                        <img src="{{ URL::asset('/img/lista_pelis/padrino.jpeg')}}" alt="el_padrino">
-                        <p>El padrino</p>
+                        <img src="{{ URL::asset('/img/movie_poster/godfather.jpeg')}}" alt="Godfather">
+                        <p>Godfather</p>
                     </a>
                     <a href="">
-                        <img src="{{ URL::asset('/img/lista_pelis/padrino.jpeg')}}" alt="el_padrino">
-                        <p>El padrino</p>
+                        <img src="{{ URL::asset('/img/movie_poster/godfather.jpeg')}}" alt="Godfather">
+                        <p>Godfather</p>
                     </a>
                     <a href="">
-                        <img src="{{ URL::asset('/img/lista_pelis/padrino.jpeg')}}" alt="el_padrino">
-                        <p>El padrino</p>
+                        <img src="{{ URL::asset('/img/movie_poster/godfather.jpeg')}}" alt="Godfather">
+                        <p>Godfather</p>
                     </a>
                 </div>
     @endif
