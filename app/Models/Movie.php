@@ -6,29 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Movie extends Model
 {
-    // Especificamos el nombre de la tabla
-    protected $table = 'movies';
+    protected $fillable = ['titulo_medio', 'sinopsis', 'caratula', 'genero', 'duracion_total'];
 
-    // Definimos los campos que son asignables en masa
-    protected $fillable = ['titulo_medio', 'sinopsis', 'genero', 'duracion_total'];
-
-    /**
-     * Define la relación muchos a muchos con el modelo Actor.
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
-     */
-    public function actors()
+    // Método para obtener la lista de películas filtradas por categoría
+    public static function getByCategory($category)
     {
-        return $this->belongsToMany(Actor::class, 'reparto');
-    }
-
-    /**
-     * Define la relación muchos a muchos con el modelo User a través de la tabla intermedia Favoritos.
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
-     */
-    public function usuarios()
-    {
-        return $this->belongsToMany(User::class, 'favorito');
+        // Filtrar las películas por la categoría especificada
+        return Movie::where('genero', $category)->get();
     }
 }

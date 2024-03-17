@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Actor extends Model
 {
+    protected $table = 'actor';
     use HasFactory;
 
     public function movies()

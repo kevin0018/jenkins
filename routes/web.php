@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ReproductorController;
 use App\Http\Controllers\BusquedaController;
+use App\Http\Controllers\MovieController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -57,10 +59,7 @@ Route::get('search', [BusquedaController::class, 'buscar'])->name('cine_busqueda
 Route::get('reproductor', 'App\Http\Controllers\ReproductorController@index')->name('cine_reproductor');
 
 //LISTA PELICULAS
-Route::get('list', function() {
-    return view('cine.lista_peliculas');
-})->name('cine_lista_peliculas');
-
+Route::get('list', [MovieController::class, 'index'])->name('cine_lista_peliculas');
 
 //PASARELA DE PAGO
 Route::post('pasarelaPago', function () {
