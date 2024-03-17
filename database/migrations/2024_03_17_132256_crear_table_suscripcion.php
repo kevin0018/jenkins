@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('suscripcion', function (Blueprint $table) {
             $table->id();
             $table->enum('tipo_de_suscripcion',['Silver','Gold','Platinum']);
-            $table->enum('tipo_de_suscripcion',['Monthly','Anual']);
+            $table->enum('modalidad_de_suscripcion',['Monthly','Anual']);
            
             $table->timestamps();
         });

@@ -15,10 +15,11 @@ return new class extends Migration
     {
         Schema::create('reparto', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('actor_id')->constrained();
-            $table->foreignId('pelicula_id')->constrained();
+            $table->foreignId('actor_id')->constrained('actor');
+            $table->foreignId('pelicula_id')->constrained('pelicula');
             $table->timestamps();
-        });    }
+        });
+    }
 
     /**
      * Reverse the migrations.

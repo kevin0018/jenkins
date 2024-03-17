@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('capitulo', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('serie_id')->constrained(); // Clave foránea para la serie
+         
             $table->string('titulo');
             $table->text('sinopsis');
             $table->integer('duracion'); // Duración del capítulo en minutos
