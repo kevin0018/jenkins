@@ -13,8 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        //
-    }
+        Schema::create('pelicula', function (Blueprint $table) {
+            $table->id();
+           
+            $table->timestamps();
+            
+        });    }
 
     /**
      * Reverse the migrations.
@@ -23,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('pelicula');
     }
 };

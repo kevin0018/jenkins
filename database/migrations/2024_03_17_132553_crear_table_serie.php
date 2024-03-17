@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('serie', function (Blueprint $table) {
             $table->id();
             $table->string('temporadas');
+            $table->timestamps();
             
         });
     }

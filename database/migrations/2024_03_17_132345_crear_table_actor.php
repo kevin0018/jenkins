@@ -13,8 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        //
-    }
+        Schema::create('actor', function (Blueprint $table) {
+            $table->id();
+            $table->string('nombre');
+            $table->enum('actor_genero', ['Masculino', 'Femenino', 'Otro']);       
+            $table->integer('edad');
+            $table->timestamps();
+        });
+            }
 
     /**
      * Reverse the migrations.
@@ -23,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('actor');
     }
 };

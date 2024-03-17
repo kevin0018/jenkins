@@ -13,7 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('suscripcion', function (Blueprint $table) {
+            $table->id();
+            $table->enum('tipo_de_suscripcion',['Silver','Gold','Platinum']);
+            $table->enum('tipo_de_suscripcion',['Monthly','Anual']);
+           
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('suscripcion');
     }
 };

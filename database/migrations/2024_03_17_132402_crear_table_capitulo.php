@@ -13,7 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('capitulo', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('serie_id')->constrained(); // Clave foránea para la serie
+            $table->string('titulo');
+            $table->text('sinopsis');
+            $table->integer('duracion'); // Duración del capítulo en minutos
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('capitulo');
     }
 };
