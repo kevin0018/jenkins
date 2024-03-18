@@ -16,6 +16,7 @@
         body {
             margin: 0;
             padding: 0;
+            height: 100vh;
             font-family: Arial, sans-serif;
             background-image: url('https://i.pinimg.com/originals/10/b1/ba/10b1bad21f79df5f462c1c09f12db6ff.jpg');
             background-size: cover;
@@ -41,6 +42,15 @@
             color: #fff; /* Color de texto blanco para mayor contraste */
             margin-top: 80px; /* Ajustar el espacio para evitar que el contenido se solape con el encabezado fijo */
         }
+
+        .container-login {
+            width: 30%;
+            background-color: rgb(246, 167, 0, 0.9); 
+            border: 5px groove blue; 
+            border-radius: 30px; 
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.9);
+        }
+
 
         footer {
             background-color: rgba(255, 204, 0, 0.5); /* Color de fondo con transparencia */

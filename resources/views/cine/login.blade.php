@@ -1,9 +1,9 @@
 @extends('layouts.loginLa ')
 @section('title', 'Sign in')
 @section('content')
-<div class="container" style="min-width:300px;width: 30%; margin-top: 2%; padding-top: 2%; padding-bottom: 4%; background-color: rgb(246, 167, 0, 0.9); border: 5px groove blue; border-radius: 30px; box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.9);">
+<div class="container container-login">
     <!-- Contenido de tu contenedor -->
-    <h1 class="text-dark mb-4 text-center"><strong>SIGN IN</strong></h1>
+    <h1 class="text-dark mb-4 text-center" style="padding-top: 6px;"><strong>SIGN IN</strong></h1>
     <div class="row justify-content-center">
         <div class="col-md-6 form-container">
             <!-- Email input -->
