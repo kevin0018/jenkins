@@ -66,6 +66,11 @@ Route::post('pasarelaPago', function () {
     return view('cine.pasarelaPago');
 })->name('cine_pasarelaPago');
 
+//Thank you page
+
+Route::post('thankyou_page', function () {
+    return view('cine.thankyou_page');
+})->name('thankyou_page');
 
 //SUSCRIPCIONES
 Route::get('suscriptions', function () {

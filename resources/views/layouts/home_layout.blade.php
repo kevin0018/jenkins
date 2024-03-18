@@ -61,8 +61,11 @@
                         style="filter: drop-shadow(0 0 10px rgba(0, 0, 0, .8))">
                 </a>
             </div>
+           
             <div>
-                <a href="login" class="btn btn-dark text-warning text-decoration-none">Log in</a>
+                <a href="{{route('cine_login')}}" class="btn btn-dark text-warning text-decoration-none">Log in</a>
+                <a href="{{route('cine_registro')}}"class="btn btn-dark text-warning text-decoration-none">Register</a>
+
             </div>
         </div>
     </header>

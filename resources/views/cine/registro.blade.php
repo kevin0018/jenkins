@@ -65,11 +65,12 @@
             <!-- Botón de registro -->
             <div class="col-md-12 text-center">
                 <button type="submit" class="btn btn-dark text-warning" style=" margin-top:10px;width: 200px;"><strong>CONTINUE WITH PAYMENT</strong></button>
+                
             </div>
             </form>
             <!-- Enlace a más detalles de suscripciones -->
             <div class="col-md-12 text-center mt-3">
-                <a href="{{ route('cine_suscriptions') }}"  class="text-dark">More Subscription Details</a>
+            <p>You already have account? <span><a style="text-decoration:none; color:blue;" href="{{ route('cine_login')}}"><strong>LOG  IN</strong></a></span></p>                <a href="{{ route('cine_suscriptions')}}"  class="text-dark">More Subscription Details</a>
             </div>
         </div>
     </div>

@@ -3,12 +3,13 @@
 @section('content')
 <div class="container" style=" min-width:300px;width: 30%; margin-top: 2%; padding-top: 2%; padding-bottom: 5%; background-color: rgb(246, 167, 0, 0.9); border: 5px groove blue; border-radius: 30px; box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.9);">
     <!-- Contenido de tu contenedor -->
+    
     <h1 class="text-dark mb-4 text-center"><strong>PAYMENT</strong></h1>
     <div class="row justify-content-center">
         <!-- Tres campos en la izquierda -->
         <div class="col-md-6 form-container">
             <!-- Formulario de registro -->
-            <form action="{{ route('cine_login_p') }}" method="POST">
+            <form action="{{ route('thankyou_page') }}" method="POST">
                 @csrf
                 <div class="form-check mb-2">
                     <input class="form-check-input" type="radio" name="paymentMethod" id="paymentMethod1" value="Paypal">
@@ -51,9 +52,15 @@
             </div>
             <!-- Botón de registro -->
             <div class="col-md-12 text-center">
+                
                 <button type="submit" class="btn btn-dark text-warning" style=" margin-top:10px;width: 200px;"><strong>CONTINUE</strong></button>
             </div>
+           
+           
             </form>
+            <button class="btn btn-primary text-warning" style=" width: 200px;"><strong><a href="{{route('cine_registro')}}"></a>BACK</strong></button>
+
+           
         </div>
     </div>
 </div>

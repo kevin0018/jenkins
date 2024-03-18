@@ -36,7 +36,11 @@ docker run --rm \
 The first time you run this project you need to migrate and seed all the database
 
 ````
- ./vendor/bin/sail php artisan migrate:fresh --seed 
+./vendor/bin/sail php artisan migrate:fresh   
+./vendor/bin/sail  php artisan db:seed --class=MovieSeeder (los seeders que hagan falta)
+
+
+
 ````
 
 ## License
