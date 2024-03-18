@@ -149,7 +149,7 @@
             <hr>
             <div class="row">
                 <div class="col-md-6">
-                    <p class="mb-0"><a href="#">Términos de uso</a> | <a href="#">Privacidad</a></p>
+                <p class="mb-0"><a href="{{route('cine_terms_of_use')}}">Terms of Use</a> | <a href="#">Privacy Policy</a></p>
                 </div>
                 <div class="col-md-6 text-md-right">
                     <p class="mb-0">© {{ date('Y') }} Todos los derechos reservados</p>
