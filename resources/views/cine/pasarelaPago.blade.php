@@ -58,7 +58,7 @@
            
            
             </form>
-            <button class="btn btn-primary text-warning" style=" width: 200px;"><strong><a href="{{route('cine_registro')}}"></a>BACK</strong></button>
+            <a href="{{ route('cine_registro') }}" class="btn btn-primary text-warning" style="display: inline-block; width: 200px; text-align: center; text-decoration: none; padding: .5rem 1rem; border-radius: .25rem;"><strong>BACK</strong></a>
 
            
         </div>

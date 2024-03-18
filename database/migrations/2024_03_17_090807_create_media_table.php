@@ -13,7 +13,7 @@
          */
         public function up()
         {
-            Schema::create('movies', function (Blueprint $table) {
+            Schema::create('media', function (Blueprint $table) {
                 $table->id();
                 $table->string('titulo_medio');
                 $table->text('sinopsis');
@@ -32,6 +32,6 @@
          */
         public function down()
         {
-            Schema::dropIfExists('movies');
+            Schema::dropIfExists('media');
         }
     };

@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Movie extends Model
+class Media extends Model
 {
     protected $fillable = ['titulo_medio', 'sinopsis', 'caratula', 'genero', 'duracion_total'];
 
@@ -12,6 +12,6 @@ class Movie extends Model
     public static function getByCategory($category)
     {
         // Filtrar las películas por la categoría especificada
-        return Movie::where('genero', $category)->get();
+        return Media::where('genero', $category)->get();
     }
 }

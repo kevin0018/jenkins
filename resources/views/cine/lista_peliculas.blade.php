@@ -1,5 +1,5 @@
 @extends('layouts.cine')
-@section('title', 'Movie List')
+@section('title', 'Media List')
 @section('content')
 <style>
     .movie-grid {
@@ -17,15 +17,15 @@
 }
 
 </style>
-@foreach($moviesByCategory as $category => $movies)
+@foreach($mediasByCategory as $category => $media)
     <h2 class="with-line">{{ strtoupper($category) }}</h2>
     <div class="content py-2">
         <div class="movie-grid">
-            @foreach($movies as $movie)
+            @foreach($media as $medi)
                 <div class="movie-item">
                     <a href="">
-                        <img src="{{ $movie->caratula }}" alt="{{ $movie->titulo_medio }}">
-                        <p>{{ $movie->titulo_medio }}</p>
+                        <img src="{{ $medi->caratula }}" alt="{{ $medi->titulo_medio }}">
+                        <p>{{ $medi->titulo_medio }}</p>
                     </a>
                 </div>
             @endforeach

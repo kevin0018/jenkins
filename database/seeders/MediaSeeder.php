@@ -3,10 +3,10 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use App\Models\Movie;
+use App\Models\Media;
 use Faker\Factory as Faker;
 
-class MovieSeeder extends Seeder
+class MediaSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -18,7 +18,7 @@ class MovieSeeder extends Seeder
         $faker = Faker::create();
 
         foreach (range(1, 20) as $index) {
-            Movie::create([
+            Media::create([
                 'titulo_medio' => $faker->sentence,
                 'sinopsis' => $faker->paragraph,
                 'caratula' => $faker->imageUrl(), // Genera una URL de imagen aleatoria

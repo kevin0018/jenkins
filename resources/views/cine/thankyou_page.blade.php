@@ -14,7 +14,7 @@
         </div>
     </div>
     
-    <a href="{{ route('cine_registro') }}">
+    <a href="{{ route('cine_login') }}">
         <button class="bg-primary text-warning" style="font-size:20px; margin-left:80%; border: 1px solid white; box-shadow: 0 0 10px yellow; height:4%;">
             <span>LOG IN</span>
         </button>
