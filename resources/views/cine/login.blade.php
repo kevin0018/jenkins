@@ -3,14 +3,14 @@
 @section('content')
 <div class="container container-login">
     <!-- Contenido de tu contenedor -->
-    <h1 class="text-dark mb-4 text-center" style="padding-top: 6px;"><strong>SIGN IN</strong></h1>
+    <h1 class="text-dark mb-4 text-center" style="padding-top: 20px;"><strong>SIGN IN</strong></h1>
     <div class="row justify-content-center">
         <div class="col-md-6 form-container">
             <!-- Email input -->
             <form action="{{ route('cine_home_p') }}" method="POST">
                 @csrf
                 <div class="form-outline mb-4">
-                    <input type="email" id="loginName" style="background-color:#FFFACD" name="loginName" class="form-control" placeholder="Username or email">
+                    <input type="email" id="loginName" style="background-color:#FFFACD" name="loginName" class="form-control" placeholder="Email">
                 </div>
                 <!-- Password input -->
                 <div class="form-outline mb-4">

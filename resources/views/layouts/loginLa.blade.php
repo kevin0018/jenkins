@@ -15,15 +15,14 @@
     <style>
         body {
             margin: 0;
-            padding: 0;
             height: 100vh;
             font-family: Arial, sans-serif;
             background-image: url('https://i.pinimg.com/originals/10/b1/ba/10b1bad21f79df5f462c1c09f12db6ff.jpg');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
+            overflow-y: hidden;
         }
-
 
         header {
             background-color: rgba(255, 204, 0, 0.5); /* Color de fondo con transparencia */
