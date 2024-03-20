@@ -58,6 +58,7 @@ Route::get('search', [BusquedaController::class, 'buscar'])->name('cine_busqueda
 
 Route::get('reproductor', 'App\Http\Controllers\ReproductorController@index')->name('cine_reproductor');
 
+
 //LISTA PELICULAS
 Route::get('list', [MediaController::class, 'index'])->name('cine_lista_peliculas');
 
@@ -71,6 +72,8 @@ Route::post('pasarelaPago', function () {
 Route::post('thankyou_page', function () {
     return view('cine.thankyou_page');
 })->name('thankyou_page');
+
+
 
 //SUSCRIPCIONES
 Route::get('suscriptions', function () {
@@ -89,3 +92,16 @@ Route::get('legal/privacypolicy', function() {
 
 
 
+//ADMIN
+//entorno de pruebas, pulir luego
+
+//Make movie/media
+Route::post('admin/movieMaker', function () {
+    return view('admin.movieMaker');
+})->name('admin_movie_maker');
+
+
+
+Route::get('admin/movieMaker', function () {
+    return view('admin.movieMaker');
+})->name('admin_movie_maker');
