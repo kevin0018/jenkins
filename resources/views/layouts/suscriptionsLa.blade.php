@@ -92,23 +92,7 @@
                 background: linear-gradient(to right, rgba(255, 255, 255, 0), #fff, rgba(255, 255, 255, 0));
             }
 
-            .lista-pelis a img {
-                width: 200px;
-            }
-
-            .lista-pelis a {
-                margin-top: 5px;
-                margin-left: 5%;
-                font-size: 14px;
-                text-align: center;
-                text-decoration: none;
-                color: white;
-            }
-
-            .lista-pelis {
-                margin-right: 20px;
-            }
-
+           
             footer a {
                 text-decoration: none;
                 color: black;
