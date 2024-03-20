@@ -114,12 +114,12 @@
                 </div>
                 <hr>
                 <div class="row">
-                    <div class="col-md-6">
-                        <p class="mb-0"><a href="#">Terms of Use</a> | <a href="#">Privacy Policy</a></p>
-                    </div>
-                    <div class="col-md-6 text-md-right">
-                        <p class="mb-0">© {{ date('Y') }} All rights reserved</p>
-                    </div>
+                <div class="col-md-6">
+                    <p class="mb-0"><a href="{{ route('cine_terms_of_use')}}">Terms of Use</a> | <a href="{{ route('cine_privacy_policy')}}">Privacy Policy</a></p>
+                </div>
+                <div class="col-md-6 text-md-right">
+                    <p class="mb-0">© {{ date('Y') }} All rights reserved</p>
+                </div>
                 </div>
             </div>
         </footer>

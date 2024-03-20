@@ -78,10 +78,13 @@ Route::get('suscriptions', function () {
 })->name('cine_suscriptions');
 
 //Terminos y Privacidad
-Route::get('termsofuse', function() {
-    return view('cine.terminos_de_uso');
+Route::get('legal/termsofuse', function() {
+    return view('legal.terminos_de_uso');
 })->name('cine_terms_of_use');
 
+Route::get('legal/privacypolicy', function() {
+    return view('legal.privacy_policy');
+})->name('cine_privacy_policy');
 
 
 

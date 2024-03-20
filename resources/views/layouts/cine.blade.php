@@ -43,6 +43,13 @@
             background: linear-gradient(to right, rgba(255, 255, 255, 0), #fff, rgba(255, 255, 255, 0));
         }
 
+        .movie-list {
+            margin-right: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
         .movie-list a img {
             width: 200px;
         }
@@ -55,11 +62,7 @@
             text-decoration: none;
             color: white;
         }
-
-        .movie-list {
-            margin-right: 20px;
-        }
-
+        
         footer a {
             text-decoration: none;
             color: black;
@@ -84,7 +87,7 @@
                         <a href="{{ route('cine_home_user') }}" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ route('cine_lista_peliculas') }}" class="nav-link">Movie List</a>
+                        <a href="{{ route('cine_lista_peliculas') }}" class="nav-link">Media List</a>
                     </li>
                 </ul>
             </nav>
@@ -146,7 +149,7 @@
             <hr>
             <div class="row">
                 <div class="col-md-6">
-                    <p class="mb-0"><a href="#">Terms of Use</a> | <a href="#">Privacy Policy</a></p>
+                    <p class="mb-0"><a href="{{ route('cine_terms_of_use')}}">Terms of Use</a> | <a href="{{ route('cine_privacy_policy')}}">Privacy Policy</a></p>
                 </div>
                 <div class="col-md-6 text-md-right">
                     <p class="mb-0">© {{ date('Y') }} All rights reserved</p>
