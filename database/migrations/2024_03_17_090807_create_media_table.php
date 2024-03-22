@@ -19,7 +19,7 @@
                 $table->text('sinopsis');
                 $table->text('caratula');
 
-                $table->enum('genero',['Acción', 'Comedia', 'Drama', 'Ciencia ficción', 'Fantasía']);
+                $table->enum('genero',['Action', 'Comedy', 'Drama', 'Sci-fi', 'Fantasy']);
                 $table->integer('duracion_total');
                 $table->timestamps();
             });

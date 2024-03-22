@@ -10,19 +10,105 @@
                 @csrf
                 <p class="text-warning"> <strong>Choose a type of media</strong></p>
                 <div class="form-check mb-2">
-                    <input class="form-check-input" type="radio" name="paymentMethod" id="typeMedia1" value="Serie">
+                    <input class="form-check-input" type="radio" name="typeMedia" id="typeMedia1" value="Serie">
                     <label class="form-check-label text-warning" for="typeMedia1">
                         Serie
                     </label>
+                    
                 </div>
+             
                 <div class="form-check mb-2">
-                    <input class="form-check-input" type="radio" name="paymentMethod" id="typeMedia2" value="Film">
+                    <input class="form-check-input" type="radio" name="typeMedia" id="typeMedia2" value="Film">
                     <label class="form-check-label text-warning" for="typeMedia2">
                         Film
                     </label>
                 </div>
-               
+                <div id= "atribFilm" style="display:none">
+                        <!-- cosas de peli--> que miras
+
+            </div>
+            <div id= "atribSerie" style="display:none">
+            <!-- cosas de serie--> 
+            <h2 class="jumbotron text-center text-danger">FILL DATA OF NEW SERIE</h2>
+            <!--Name -->
+                    <label for="sinospsiSerie" class="text-warning">Name of Serie: </label> <br>    
+                    <input type="text" name="nameMedia" id="nameSerie" placeholder="Name of Serie" >  
+                    <!--Genre-->
+                    <label for="generoSerie" class="text-warning" style="margin-left:50px">Genre:   </label>
+                    <select name="generoMedia" id="generoSerie">
+                    <option value="dummy" disabled selected>Choose a genre</option>
+                    <option value="Action">Action</option>
+                    <option value="Comedy">Comedy</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Sci-fi">Sci-fi</option>
+                    <option value="Fantasy">Fantasy</option>
+
+                    </select>
+                    <!--Seasons-->
+                    <label for="seasons" class="text-warning" style="margin-left:50px">How many seasons will have the serie?    </label>
+                    <select name="seasons" id="seasons">
+                    <option value="dummy" disabled selected>Choose number of seasons</option>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="other">other</option>
+
+                    </select>
+                    <div id="customSeason" style="display:none">
+                        <label for="custom" class="text-warning">Number of seasons: </label>
+                        <input type="number" name="seasons" id="customSeasons">
+                    </div>
+
+
+                    <br>
+                    <br>
+                    <!--SINOPSIS -->
+
+                    <label for="sinopsisSerie" class="text-warning" style="display: inline-block;">Sinopsis: </label>
+<textarea name="sinopsisMedia" id="sinopsisSerie" style="height:auto; width:100%; vertical-align: top;" placeholder="Sinopsis de la serie"></textarea>
+
+
+                   
+ <!--DURACIÓN TOTAL -->
+                     <label for="sinospsiSerie" class="text-warning">Sinopsis: </label>
+                    <input type="textarea" name="sinopsisMedia" id="sinopsisSerie" placeholder="Sinopsis of Serie"> &nbsp;
+             <!--TEMPORADAS-->
+             <label for="sinospsiSerie" class="text-warning">Sinopsis: </label>
+                    <input type="textarea" name="sinopsisMedia" id="sinopsisSerie" placeholder="Sinopsis of Serie"> &nbsp;
+                   
+
+                  
+                    
+                
+            </div>
               
             </div>
+            <script>
+    // Función para mostrar los campos de tarjeta de crédito/débito al seleccionar esa opción
+    document.querySelectorAll('input[name="typeMedia"]').forEach(function(radio) {
+        radio.addEventListener('change', function() {
+            var peliAtt = document.getElementById('atribFilm');
+            var serieAtt = document.getElementById('atribSerie');
+
+            if (this.value === 'Film') {
+                peliAtt.style.display = 'block';
+                serieAtt.style.display = 'none';
+            } else {
+                peliAtt.style.display = 'none';
+                serieAtt.style.display = 'block';
+            }
+        });
+    });
+    var seasons=document.getElementById("seasons");
+    var customSeasons = document.getElementById("customSeason");
+    seasons.addEventListener("change", function() {
+        if (seasons.value === 'other') {
+            customSeasons.style.display = 'block';
+        } else {
+            customSeasons.style.display = 'none';
+        }
+    });
+</script>
 
 @endsection
