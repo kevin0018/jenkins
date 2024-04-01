@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ReproductorController;
 use App\Http\Controllers\BusquedaController;
 use App\Http\Controllers\MediaController;
-use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\AuthController;
 
 
 /*
@@ -36,13 +36,13 @@ Route::post('home', function() {
 
 
 //LOGIN
-Route::get('login', function () {
-    return view('cine.login');
-})->name('cine_login');
 
-Route::post('login', function () {
-    return view('cine.login');
-})->name('cine_login_p');
+// Ruta para mostrar el formulario de inicio de sesión
+Route::get('/login', [AuthController::class, 'showLoginForm'])->name('cine_login');
+
+// Ruta para manejar la autenticación
+Route::post('/login', [AuthController::class, 'authenticate'])->name('cine_login_p');
+
 
 //REGISTRO
 Route::get('registro', function () {
@@ -89,8 +89,6 @@ Route::get('legal/termsofuse', function() {
 Route::get('legal/privacypolicy', function() {
     return view('legal.privacy_policy');
 })->name('cine_privacy_policy');
-
-
 
 
 //ADMIN

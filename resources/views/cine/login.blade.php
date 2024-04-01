@@ -1,4 +1,4 @@
-@extends('layouts.loginLa ')
+@extends('layouts.loginLa')
 @section('title', 'Sign in')
 @section('content')
 <div class="container container-login">
@@ -6,26 +6,23 @@
     <h1 class="text-dark mb-4 text-center" style="padding-top: 20px;"><strong>SIGN IN</strong></h1>
     <div class="row justify-content-center">
         <div class="col-md-6 form-container">
-            <!-- Email input -->
-            <form action="{{ route('cine_home_p') }}" method="POST">
+            <!-- Formulario de inicio de sesión -->
+            <form action="{{ route('cine_login_p') }}" method="POST">
                 @csrf
                 <div class="form-outline mb-4">
-                    <input type="email" id="loginName" style="background-color:#FFFACD" name="loginName" class="form-control" placeholder="Email">
+                    <input type="email" id="loginName" style="background-color:#FFFACD" name="email" class="form-control" placeholder="Email">
                 </div>
-                <!-- Password input -->
                 <div class="form-outline mb-4">
-                    <input type="password" id="loginPassword" style="background-color:#FFFACD" name="loginPassword" class="form-control" placeholder="Password">
+                    <input type="password" id="loginPassword" style="background-color:#FFFACD" name="password" class="form-control" placeholder="Password">
                 </div>
                 <div class="form-outline mb-4 text-center">
                     <button type="submit" class="btn btn-dark text-warning"><strong>LOG IN</strong></button>
                 </div>
             </form>
-            <!-- 2 column grid layout -->
+            <!-- Enlaces adicionales -->
             <div class="row mb-4">
                 <div class="col-12 text-center">
-                    <!-- Checkbox -->
-                    <!-- Simple link -->
-                    <a href="/Check"><strong>Forget your password?</strong></a>
+                    <a href="/password/reset"><strong>Forget your password?</strong></a>
                     <p class="mb-0 text-dark"><strong>New to Jenkins?</strong> <a href="{{ route('cine_registro') }}"><strong>Sign up now!</strong></a></p>
                 </div>
             </div>

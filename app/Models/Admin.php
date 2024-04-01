@@ -22,5 +22,10 @@ class Admin extends Authenticatable
         'email_verified_at' => 'datetime',
         'is_admin' => 'boolean', // Cast 'is_admin' to boolean
     ];
+
+    public function isAdmin()
+    {
+        return true;
+    }
 }
 
