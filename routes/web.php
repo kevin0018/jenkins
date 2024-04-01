@@ -95,7 +95,6 @@ Route::get('legal/privacypolicy', function() {
 //entorno de pruebas, pulir luego
 
 //Make movie/media
-Route::post('/login', [AuthController::class, 'authenticate'])->name('login');
 
 Route::middleware(['auth', 'admin'])->group(function () {
     Route::post('admin/movieMaker', function () {

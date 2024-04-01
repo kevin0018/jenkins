@@ -24,7 +24,7 @@ class AuthController extends Controller
                 return redirect()->route('admin_movie_maker');
             } else {
                 // Redirige a la página de inicio del usuario
-                return redirect()->route('home');
+                return redirect()->route('cine_home_user');
             }
         }
 
