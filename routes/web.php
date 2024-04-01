@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ReproductorController;
 use App\Http\Controllers\BusquedaController;
 use App\Http\Controllers\MediaController;
+use App\Http\Controllers\Auth\AuthController;
 
 
 /*
@@ -96,12 +97,14 @@ Route::get('legal/privacypolicy', function() {
 //entorno de pruebas, pulir luego
 
 //Make movie/media
-Route::post('admin/movieMaker', function () {
-    return view('admin.movieMaker');
-})->name('admin_movie_maker');
+Route::post('/login', [AuthController::class, 'authenticate'])->name('login');
 
+Route::middleware(['auth', 'admin'])->group(function () {
+    Route::post('admin/movieMaker', function () {
+        return view('admin.movieMaker');
+    })->name('admin_movie_maker');
 
-
-Route::get('admin/movieMaker', function () {
-    return view('admin.movieMaker');
-})->name('admin_movie_maker');
+    Route::get('admin/movieMaker', function () {
+        return view('admin.movieMaker');
+    })->name('admin_movie_maker');
+});

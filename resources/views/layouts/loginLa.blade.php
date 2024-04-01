@@ -15,7 +15,8 @@
     <style>
         body {
             margin: 0;
-            height: 100vh;
+            padding-bottom: 100px;
+            min-height: 100vh;
             font-family: Arial, sans-serif;
             background-image: url('https://i.pinimg.com/originals/10/b1/ba/10b1bad21f79df5f462c1c09f12db6ff.jpg');
             background-size: cover;
@@ -25,21 +26,21 @@
         }
 
         header {
-            background-color: rgba(255, 204, 0, 0.5); /* Color de fondo con transparencia */
+            background-color: rgba(255, 204, 0, 0.5);
             color: #050505;
             padding: 20px;
             text-align: center;
             width: 100%;
-            position: fixed; /* Para fijar el encabezado en la parte superior */
-            top: 0; /* Fijar el encabezado en la parte superior */
-            z-index: 1000; /* Asegurar que el encabezado esté sobre otros elementos */
+            position: fixed;
+            top: 0;
+            z-index: 1000;
         }
 
         main {
             margin: 2%;
             padding: 5%;
             color: #fff; /* Color de texto blanco para mayor contraste */
-            margin-top: 80px; /* Ajustar el espacio para evitar que el contenido se solape con el encabezado fijo */
+            margin-top: 30px; /* Ajustar el espacio para evitar que el contenido se solape con el encabezado fijo */
         }
 
         .container-login {
