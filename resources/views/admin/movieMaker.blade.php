@@ -4,7 +4,7 @@
 @section('content')
     <h1 class="jumbotron text-center text-warning">MAKE A FILM OR SERIE TO JENKINS</h1>
 
-
+        <!--SELECCIÓN SERIE/PELI-->
     <div class="container" style="min-width: 300px;background-color:black">
             <p class="text-warning"> <strong>Choose a type of media</strong></p>
             <div class="form-check mb-2">
@@ -14,13 +14,17 @@
                 </label>
 
             </div>
-
+            
+<!--PELI-->
             <div class="form-check mb-2">
                 <input class="form-check-input" type="radio" name="typeMedia" id="typeMedia2" value="Film">
                 <label class="form-check-label text-warning" for="typeMedia2">
                     Film
                 </label>
             </div>
+
+
+
             <div id= "atribFilm" style="display:none">
                 <form action="{{ route('guardar_pelicula') }}" method="POST" enctype="multipart/form-data">
                     @csrf
@@ -48,6 +52,8 @@
                 </form>
 
             </div>
+
+            <!--SERIE-->
             <div id= "atribSerie" style="display:none">
                 <!-- cosas de serie-->
                 <h2 class="jumbotron text-center text-danger">FILL DATA OF NEW SERIE</h2>
@@ -104,7 +110,7 @@
 
     </div>
     <script>
-        // Función para mostrar los campos de tarjeta de crédito/débito al seleccionar esa opción
+        // SCRIPT PARA seleccionar pelicula o serie y  mostrar unas opciones u otras
         document.querySelectorAll('input[name="typeMedia"]').forEach(function(radio) {
             radio.addEventListener('change', function() {
                 var peliAtt = document.getElementById('atribFilm');

@@ -49,6 +49,8 @@ The first time you run this project you need to migrate and seed all the databas
 ## BDD
 
 mysql -u sail -p tutorial
+password :password
+select * from media; VER PELICULAS  
 
 ## License
 
