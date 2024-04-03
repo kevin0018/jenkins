@@ -14,7 +14,7 @@
                 </label>
 
             </div>
-            
+
 <!--PELI-->
             <div class="form-check mb-2">
                 <input class="form-check-input" type="radio" name="typeMedia" id="typeMedia2" value="Film">
@@ -61,16 +61,10 @@
                 <label for="sinospsiSerie" class="text-warning">Name of Serie: </label> <br>
                 <input type="text" name="nameMedia" id="nameSerie" placeholder="Name of Serie">
                 <!--Genre-->
-                <label for="generoSerie" class="text-warning" style="margin-left:50px">Genre: </label>
-                <select name="generoMedia" id="generoSerie">
-                    <option value="dummy" disabled selected>Choose a genre</option>
-                    <option value="Action">Action</option>
-                    <option value="Comedy">Comedy</option>
-                    <option value="Drama">Drama</option>
-                    <option value="Sci-fi">Sci-fi</option>
-                    <option value="Fantasy">Fantasy</option>
-
-                </select>
+                <div class="form-group">
+                        <label for="genero">Genre:</label>
+                        <input type="text" class="form-control" id="genero" name="genero">
+                    </div>
                 <!--Seasons-->
                 <label for="seasons" class="text-warning" style="margin-left:50px">How many seasons will have the serie?
                 </label>
