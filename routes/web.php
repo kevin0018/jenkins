@@ -5,6 +5,7 @@ use App\Http\Controllers\ReproductorController;
 use App\Http\Controllers\BusquedaController;
 use App\Http\Controllers\MediaController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\PeliculaController;
 
 
 /*
@@ -96,7 +97,7 @@ Route::get('legal/privacypolicy', function() {
 
 //Make movie/media
 
-Route::middleware(['auth', 'admin'])->group(function () {
+// Route::middleware(['auth', 'admin'])->group(function () {
     Route::post('admin/movieMaker', function () {
         return view('admin.movieMaker');
     })->name('admin_movie_maker');
@@ -104,4 +105,7 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('admin/movieMaker', function () {
         return view('admin.movieMaker');
     })->name('admin_movie_maker');
-});
+
+    Route::post('/guardar-pelicula', [PeliculaController::class, 'store'])->name('guardar_pelicula');
+
+// });
