@@ -12,7 +12,7 @@ class PeliculaController extends Controller {
             'titulo_medio' => 'required|string|max:255',
             'sinopsis' => 'required|string',
             'caratula' => 'required|image|max:2048',
-            'genero' => 'required|string|max:255',
+            'genero' => 'required|string',
             'duracion_total' => 'required|string|max:50',
         ]);
 
