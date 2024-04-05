@@ -37,8 +37,15 @@
                         <input type="file" class="form-control-file" id="caratula" name="caratula">
                     </div>
                     <div class="form-group">
-                        <label for="genero">Genre:</label>
-                        <input type="text" class="form-control" id="genero" name="genero">
+                        <select name="genero" id="genero">
+                            <option value="dummy" disabled selected>Choose a genre</option>
+                            <option value="Action">Action</option>
+                            <option value="Comedy">Comedy</option>
+                            <option value="Drama">Drama</option>
+                            <option value="Sci-fi">Sci-fi</option>
+                            <option value="Fantasy">Fantasy</option>
+
+                        </select>
                     </div>
                     <div class="form-group">
                         <label for="duracion_total">Total Duration:</label>

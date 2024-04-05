@@ -38,7 +38,7 @@
 
         main {
             margin: 2%;
-            padding: 5%;
+            padding: 6%;
             color: #fff; /* Color de texto blanco para mayor contraste */
             margin-top: 30px; /* Ajustar el espacio para evitar que el contenido se solape con el encabezado fijo */
         }
