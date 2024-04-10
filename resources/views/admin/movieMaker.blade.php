@@ -24,6 +24,8 @@
               <div id= "atribFilm" style="display:none">
                 <form action="{{ route('guardar_pelicula') }}" method="POST" enctype="multipart/form-data">
                     @csrf
+                    <!-- cosas de pelis-->
+                    <h2 class="jumbotron text-center text-danger">FILL DATA OF NEW FILM</h2>
                     <div class="form-group">
                         <label for="titulo_medio">Title:</label>
                         <input type="text" class="form-control" id="titulo_medio" name="titulo_medio">
