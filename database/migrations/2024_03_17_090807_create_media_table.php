@@ -18,6 +18,7 @@
                 $table->string('titulo_medio');
                 $table->text('sinopsis');
                 $table->text('caratula');
+                $table->enum('tipo',['Serie','Pelicula']);
 
                 $table->enum('genero',['Action', 'Comedy', 'Drama', 'Sci-fi', 'Fantasy']);
                 $table->integer('duracion_total');

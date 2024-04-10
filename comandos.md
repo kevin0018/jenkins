@@ -39,8 +39,7 @@ The first time you run this project you need to migrate and seed all the databas
 ./vendor/bin/sail php artisan make migration create_table_nomdelatabla   
 
 ./vendor/bin/sail php artisan migrate:fresh   
-./vendor/bin/sail  php artisan db:seed --class=MediaSeeder (los seeders que hagan falta)
-./vendor/bin/sail php artisan db:seed --class=AdminSeeder
+./vendor/bin/sail  php artisan db:seed --class=MediaSeeder 
 
 
 

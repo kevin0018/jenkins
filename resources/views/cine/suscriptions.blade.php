@@ -47,6 +47,6 @@
 
         </div>
         </div>
-        <a href="{{route('cine_registro')}}"> <button class="bg-warning text-primary " style=" font-size:20px;margin-left:80%; border: 1px solid white; box-shadow 0 0 10px yellow; height:10%"><span >RETURN TO REGISTER PAGE</button></a>
+        <a href="{{ URL::previous() }}"> <button class="bg-warning text-primary " style=" font-size:20px;margin-left:80%; border: 1px solid white; box-shadow 0 0 10px yellow; height:10%"><span >BACK</button></a>
 </div>
 @endsection

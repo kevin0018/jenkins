@@ -1,6 +1,8 @@
 @extends('layouts.cine')
 @section('title', 'Privacy Policy')
 @section('content')
+<a href="{{ URL::previous() }}" class="btn btn-primary">Back</a>
+
     <h1 class="text-warning">Privacy Policy</h1>
         
     <h2 class="text-warning">1. Information We Collect</h2>

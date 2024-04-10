@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Media extends Model
 {
-    protected $fillable = ['titulo_medio', 'sinopsis', 'caratula', 'genero', 'duracion_total'];
+    protected $fillable = ['titulo_medio', 'sinopsis', 'caratula','tipo', 'genero', 'duracion_total'];
 
     // Método para obtener la lista de películas filtradas por categoría
     public static function getByCategory($category)

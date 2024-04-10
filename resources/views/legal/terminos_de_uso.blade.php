@@ -1,6 +1,8 @@
 @extends('layouts.cine')
 @section('title', 'Terms of Use')
 @section('content')
+<a href="{{ URL::previous() }}" class="btn btn-primary">Back</a>
+
     <h1 class="text-warning" >Terms and Conditions of Use</h1>
         
     <h2 class="text-warning">1. Use of the Website</h2>

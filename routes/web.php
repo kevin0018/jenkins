@@ -82,6 +82,8 @@ Route::get('suscriptions', function () {
     return view('cine.suscriptions');
 })->name('cine_suscriptions');
 
+
+//LEGAL
 //Terminos y Privacidad
 Route::get('legal/termsofuse', function() {
     return view('legal.terminos_de_uso');
@@ -91,6 +93,15 @@ Route::get('legal/privacypolicy', function() {
     return view('legal.privacy_policy');
 })->name('cine_privacy_policy');
 
+//Que és Jenkins
+Route::get('legal/what-is-jenkins', function() {
+    return view('legal.what_is_Jenkins');
+})->name('what_is_jenkins');
+
+//compatible devices
+Route::get('legal/compatible-devices', function() {
+    return view('legal.compatible_devices');
+})->name('compatible_devices');
 
 //ADMIN
 //entorno de pruebas, pulir luego

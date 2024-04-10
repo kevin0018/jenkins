@@ -24,7 +24,7 @@
                     <!-- Links to cancel subscription and go back -->
                     <div class="text-center mt-4">
                         <a href="/cancelSuscription" class="btn btn-danger mr-3">Cancel Subscription</a>
-                        <a href="{{route('cine_home_user')}}" class="btn btn-primary">Back</a>
+                        <a href="{{ URL::previous() }}" class="btn btn-primary">Back</a>
                     </div>
                 </div>
             </div>
