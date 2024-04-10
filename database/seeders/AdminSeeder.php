@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use App\Models\Admin;
+use App\Models\User;
 
 class AdminSeeder extends Seeder
 {
@@ -14,10 +14,11 @@ class AdminSeeder extends Seeder
      */
     public function run()
     {
-        Admin::create([
+        User::create([
             'name' => 'Admin',
             'email' => 'admin@jenkins.com',
             'password' => 'admin123',
+            'is_admin' => true,
         ]);
     }
 }
