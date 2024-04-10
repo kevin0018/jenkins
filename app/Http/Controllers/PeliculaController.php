@@ -17,7 +17,7 @@ class PeliculaController extends Controller {
         ]);
 
         // Guardar la imagen en el almacenamiento de Laravel
-        $caratula = $request->file('caratula')->store('caratulas');
+        $caratula = $request->file('caratula')->store('public');
 
         // Crear una nueva instancia del modelo Pelicula y asignar los datos
         $Media = new Media();
@@ -31,6 +31,6 @@ class PeliculaController extends Controller {
         $Media->save();
 
         // Redireccionar a la página de inicio u otra página
-        return redirect()->route('cine_home_p')->with('success', 'Pelicula creada exitosamente.');
+        return redirect()->route('cine_home_p')->with('success', 'Film create.');
     }
 }

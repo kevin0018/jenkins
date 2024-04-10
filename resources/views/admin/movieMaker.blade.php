@@ -27,17 +27,18 @@
                     <!-- cosas de pelis-->
                     <h2 class="jumbotron text-center text-danger">FILL DATA OF NEW FILM</h2>
                     <div class="form-group">
-                        <label for="titulo_medio">Title:</label>
+                        <label for="titulo_medio" class="text-warning">Title:</label>
                         <input type="text" class="form-control" id="titulo_medio" name="titulo_medio">
                     </div>
                     <div class="form-group">
-                        <label for="sinopsis">Sinopsis:</label>
+                        <label for="sinopsis" class="text-warning">Sinopsis:</label>
                         <textarea class="form-control" id="sinopsis" name="sinopsis"></textarea>
                     </div>
                     <div class="form-group">
-                        <label for="caratula">Cover Image:</label>
+                        <label for="caratula" class="text-warning" >Cover Image:</label>
                         <input type="file" class="form-control-file" id="caratula" name="caratula">
                     </div>
+                    <label for="generoSerie" class="text-warning">Genre: </label>
                     <div class="form-group">
                         <select name="genero" id="genero">
                             <option value="dummy" disabled selected>Choose a genre</option>
@@ -50,7 +51,7 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="duracion_total">Total Duration:</label>
+                        <label for="duracion_total" class="text-warning">Total Duration:</label>
                         <input type="text" class="form-control" id="duracion_total" name="duracion_total">
                     </div>
                     <button type="submit" class="btn btn-primary">Save</button>
