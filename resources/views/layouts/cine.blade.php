@@ -7,6 +7,12 @@
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
     <link rel="icon" type="image/png" href="{{ 'img/Jenkins_logo.png' }}">
 
     <style>
@@ -20,6 +26,10 @@
 
         .fas {
             color: yellow;
+        }
+
+        .modal-content {
+            color: #000000;
         }
 
         main {

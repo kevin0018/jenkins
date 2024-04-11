@@ -1,7 +1,7 @@
 @extends('layouts.cine')
 @section('title', 'Reproductor')
 @section('content')
-    <h1>Reproduciendo: {{ $pelicula }}</h1>
+    <h1>Reproduciendo: {{ $pelicula_title }}</h1>
     <div id="player" style="width: 100%; height: 500px;"></div>
 
     <script>
@@ -14,7 +14,7 @@
     var player;
     function onYouTubeIframeAPIReady() {
         player = new YT.Player('player', {
-        videoId: 'iOyQx7MXaz0', // Inserta el ID del video de YouTube aquí
+        videoId: '{{ $pelicula_link }}', // Inserta el ID del video de YouTube aquí
         events: {
             'onReady': onPlayerReady
         }

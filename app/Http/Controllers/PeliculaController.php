@@ -14,18 +14,24 @@ class PeliculaController extends Controller {
             'caratula' => 'required|image|max:2048',
             'genero' => 'required|string|max:255',
             'duracion_total' => 'required|string|max:50',
+            'link' => 'required|string|max:255',
         ]);
 
         // Guardar la imagen en el almacenamiento de Laravel
-        $caratula = $request->file('caratula')->store('public');
+        $titulo = $request->titulo_medio;
+        $caratulaPath = $request->file('caratula')->storeAs('public', $titulo . '.' . $request->caratula->extension());
+        $caratula = str_replace('public/', '', $caratulaPath);
+
+
 
         // Crear una nueva instancia del modelo Pelicula y asignar los datos
         $Media = new Media();
-        $Media->titulo_medio = $request->titulo_medio;
+        $Media->titulo_medio = $titulo;
         $Media->sinopsis = $request->sinopsis;
         $Media->caratula = $caratula; // Guardamos la ruta de la imagen
         $Media->genero = $request->genero;
         $Media->duracion_total = $request->duracion_total;
+        $Media->link = $request->link;
 
         // Guardar la película en la base de datos
         $Media->save();

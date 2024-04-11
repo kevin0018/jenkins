@@ -8,8 +8,12 @@ class ReproductorController extends Controller
 {
     public function index(Request $request)
     {
-        $pelicula = $request->input('data-pelicula', 'Película no especificada');
+        $pelicula_title = $request->input('pelicula-title', 'Película no especificada');
+        $pelicula_link = $request->input('pelicula-link', 'Link no especificado');
    
-        return view('cine.reproductor')->with('pelicula', $pelicula);
+        return view('cine.reproductor')->with([
+            'pelicula_title' => $pelicula_title,
+            'pelicula_link' => $pelicula_link
+        ]);
     }
 }

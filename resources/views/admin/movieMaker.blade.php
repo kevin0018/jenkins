@@ -54,6 +54,10 @@
                         <label for="duracion_total" class="text-warning">Total Duration:</label>
                         <input type="text" class="form-control" id="duracion_total" name="duracion_total">
                     </div>
+                    <div class="form-group">
+                        <label for="link" class="text-warning">Link:</label>
+                        <input type="text" class="form-control" id="link" name="link">
+                    </div>
                     <button type="submit" class="btn btn-primary">Save</button>
                 </form>
 
