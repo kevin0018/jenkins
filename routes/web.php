@@ -6,6 +6,10 @@ use App\Http\Controllers\BusquedaController;
 use App\Http\Controllers\MediaController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PeliculaController;
+use App\Http\Controllers\CapituloController;
+use App\Http\Controllers\SerieController;
+
+
 
 
 /*
@@ -120,3 +124,11 @@ Route::get('legal/compatible-devices', function() {
     Route::post('/guardar-pelicula', [PeliculaController::class, 'store'])->name('guardar_pelicula');
 
 // });
+//Guardar capitulo
+// En el archivo routes/web.php
+
+Route::post('/guardar-capitulo', [CapituloController::class,'store'])->name('guardar_capitulo');
+//Guardar serie
+// En el archivo routes/web.php
+
+Route::post('/guardar-serie', [SerieController::class, 'store'])->name('guardar_serie');

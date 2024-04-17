@@ -1,13 +1,16 @@
 <?php
 
+// Modelo Capitulo corregido
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Capitulo extends Model
 {
-    protected $table = 'capitulo';
     use HasFactory;
+
+    protected $table = 'capitulo';
 
     /**
      * Define la relación de existencia con el modelo Serie.
@@ -19,3 +22,4 @@ class Capitulo extends Model
         return $this->belongsTo(Serie::class);
     }
 }
+

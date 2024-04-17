@@ -15,9 +15,13 @@ return new class extends Migration
     {
         Schema::create('capitulo', function (Blueprint $table) {
             $table->id();
-         
-            $table->string('titulo');
-            $table->text('sinopsis');
+            $table->string('nombre_capitulo');
+            $table->string('caratula')->nullable(); // Cambiado a tipo string
+            $table->unsignedBigInteger('serie_id');
+            $table->foreign('serie_id')->references('id')->on('serie');
+            $table->integer('numero_temporada');
+            $table->integer('numero_episodio');
+            $table->string('link');
             $table->integer('duracion'); // Duración del capítulo en minutos
             $table->timestamps();
         });
