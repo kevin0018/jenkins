@@ -48,6 +48,7 @@ Route::get('/login', [AuthController::class, 'showLoginForm'])->name('cine_login
 // Ruta para manejar la autenticación
 Route::post('/login', [AuthController::class, 'authenticate'])->name('cine_login_p');
 
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 //REGISTRO
 Route::get('registro', function () {
