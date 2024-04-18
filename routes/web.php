@@ -113,7 +113,7 @@ Route::get('legal/compatible-devices', function() {
 
 //Make movie/media
 
-// Route::middleware(['auth', 'admin'])->group(function () {
+ Route::middleware(['auth', 'admin'])->group(function () {
     Route::post('admin/movieMaker', function () {
         return view('admin.movieMaker');
     })->name('admin_movie_maker');
@@ -124,7 +124,7 @@ Route::get('legal/compatible-devices', function() {
 
     Route::post('/guardar-pelicula', [PeliculaController::class, 'store'])->name('guardar_pelicula');
 
-// });
+ });
 //Guardar capitulo
 // En el archivo routes/web.php
 

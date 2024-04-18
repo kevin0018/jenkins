@@ -60,10 +60,10 @@ The Laravel Tutorial was made by Dan Triano
 
 
 Listar series / pelis para editor -> Kevin
-buscador -> Kevin
+Filtro buscador -> Kevin
 Abrir multimedia de series/peliculas -> Kevin
-vistas series -> Jonathan
+vistas series -> Jonathans
 vistas peliculas -> favoritos informacion etc - Jonathan
 Log in -> Kevin
 
-subir cap, temporada, admin, no logeado no entrar en la pagina, buscador, favoritos luck
+subir cap, temporada, admin, no logeado no entrar en la pagina, buscador
