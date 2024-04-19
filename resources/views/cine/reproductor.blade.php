@@ -1,7 +1,10 @@
 @extends('layouts.cine')
 @section('title', 'Reproductor')
 @section('content')
+<a href="{{ URL::previous() }}"> <button class="bg-danger text-warning " style=" font-size:20px;margin-left:2%; border: 1px solid white; box-shadow 0 0 10px  black; height:5%"><span >BACK</button></a>
+
     <h1>Reproduciendo: {{ $pelicula_title }}</h1>
+    
     <div id="player" style="width: 100%; height: 500px;"></div>
 
     @if($pelicula)

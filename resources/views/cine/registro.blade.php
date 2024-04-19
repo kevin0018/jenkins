@@ -4,10 +4,13 @@
 <div class="container" style=" min-width:300px;width: 50%; margin-top: 2%; padding-top: 2%; padding-bottom: 5%; background-color: rgb(246, 167, 0, 0.9); border: 5px groove blue; border-radius: 30px; box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.9);">
     <!-- Contenido de tu contenedor -->
     <h1 class="text-dark mb-4 text-center"><strong>SIGN UP</strong></h1>
+    <a href="{{ URL::previous() }}"> <button class="bg-dark text-warning " style=" font-size:20px;margin-left:80%; border: 1px solid white; box-shadow 0 0 10px  black; height:10%"><span >BACK</button></a>
+
     <div class="row justify-content-center">
         <!-- Cuatro campos en la izquierda -->
         <div class="col-md-6 form-container">
             <!-- Formulario de registro -->
+            
             <form action="{{ route('cine_pasarelaPago') }}" method="POST">
                 @csrf
                 <!-- Nombre -->
@@ -73,6 +76,8 @@
             <p>You already have account? <span><a style="text-decoration:none; color:blue;" href="{{ route('cine_login')}}"><strong>LOG  IN</strong></a></span></p>                <a href="{{ route('cine_suscriptions')}}"  class="text-dark">More Subscription Details</a>
             </div>
         </div>
+        
     </div>
+    
 </div>
 @endsection
