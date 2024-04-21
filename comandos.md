@@ -43,7 +43,6 @@ The first time you run this project you need to migrate and seed all the databas
 ./vendor/bin/sail  php artisan db:seed --class=AdminUserSeeder
 ./vendor/bin/sail  php artisan db:seed --class=UserSeeder
 ./vendor/bin/sail  php artisan db:seed --class=MediaSeeder 
-./vendor/bin/sail  php artisan db:seed --class=AdminUserSeeder 
 
 
 php artisan storage:link
