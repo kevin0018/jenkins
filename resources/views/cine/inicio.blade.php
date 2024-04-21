@@ -23,7 +23,7 @@
         </div>
       </div>
 
-    <h1 class="text-center with-line">Juan, we've made a special selection for you</h1><br><br>
+    <h1 class="text-center with-line">{{ Auth::user()->name }}, we've made a special selection for you</h1><br><br>
 
     <h2 class="with-line">YOUR FAVORITES</h2>
     <div class="content py-2 movie-list">

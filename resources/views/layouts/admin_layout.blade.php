@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> @yield('title') </title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-    <link rel="icon" type="image/png" href="{{"img/Jenkins_logo.png"}}">
+
+    <link rel="icon" type="image/png" href="{{ asset('img/Jenkins_logo.png') }}">    
     <style>
         header {
             box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
@@ -57,7 +58,7 @@
     <header class="bg-warning text-white">
         <div class="mx-auto py-4 d-flex justify-content-between align-items-center" style="width: 85%">
             <div>
-                <a href="/" class="navbar-brand">
+                <a href="{{ route('cine_home_user')}}" class="navbar-brand">
                     <img src="{{ URL::asset('/img/Jenkins_logo.png') }}" alt="LogoCine" width="210px"
                         style="filter: drop-shadow(0 0 10px rgba(0, 0, 0, .8))">
                 </a>

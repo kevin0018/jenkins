@@ -119,12 +119,15 @@
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <a class="dropdown-item" href="{{ route('cine_user_data') }}">Perfil</a>
+                        @if(Auth::user() && Auth::user()->isAdmin())
+                            <a class="dropdown-item" href="{{ route('admin_movie_maker') }}">Añadir Media</a>
+                        @endif
                         <form action="{{ route('logout') }}" method="POST">
                             @csrf
                             <button type="submit" class="dropdown-item">Logout</button>
                         </form>                    
                     </div>
-                </div>
+                </div>          
                 <!-- Logo -->
                 <img src="{{ URL::asset('/img/Jenkins_logo.png') }}" alt="LogoCine" class="navbar-brand mx-2"
                     width="120px" style="filter: drop-shadow(0 0 10px rgba(0, 0, 0, .8))">
