@@ -138,3 +138,5 @@ Route::post('/guardar-capitulo', [CapituloController::class,'store'])->name('gua
 // En el archivo routes/web.php
 
 Route::post('/guardar-serie', [SerieController::class, 'store'])->name('guardar_serie');
+Route::get('/series/{serie}/capitulos', [SerieController::class, 'capitulos'])->name('serie_capitulos');
+Route::get('/series', [SerieController::class, 'index'])->name('cine_lista_series');

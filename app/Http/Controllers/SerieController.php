@@ -8,6 +8,14 @@ use App\Models\Serie;
 
     class SerieController extends Controller
     {
+        public function index()
+        {
+            // Obtener todas las series
+            $series = Serie::all();
+            
+            // Pasar los datos de las series a la vista
+            return view('cine.lista_serie', compact('series'));
+        }   
       
         public function store(Request $request)
         {
@@ -40,4 +48,13 @@ use App\Models\Serie;
 
             // Redireccionar a la página de inicio u otra página
             return redirect()->route('cine_home_p')->with('success', '¡La serie se ha creado correctamente!');        }
+
+            public function capitulos(Serie $serie)
+            {
+                // Obtener los capítulos de la serie seleccionada
+                $capitulos = Capitulo::where('serie_id', $serie->id)->get();
+                
+                // Pasar los datos de la serie y los capítulos a la vista
+                return view('series.capitulos', compact('serie', 'capitulos'));
+            }
     }

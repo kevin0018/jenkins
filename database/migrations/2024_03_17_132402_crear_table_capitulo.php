@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('nombre_capitulo');
             $table->string('caratula')->nullable(); // Cambiado a tipo string
             $table->unsignedBigInteger('serie_id');
-            $table->foreign('serie_id')->references('id')->on('serie');
+            $table->foreign('serie_id')->references('id')->on('series');
             $table->integer('numero_temporada');
             $table->integer('numero_episodio');
             $table->string('link');
