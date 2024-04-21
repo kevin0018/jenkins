@@ -62,4 +62,3 @@
             Schema::dropIfExists('serie');
         }
     };
->>>>>>> Jona
