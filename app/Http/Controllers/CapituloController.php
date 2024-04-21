@@ -18,9 +18,9 @@ class CapituloController extends Controller
         // Validación de los datos del formulario
         $request->validate([
             'nombreCapitulo' => 'required|string|max:255',
-            'serieCapitulo' => 'required|integer',
-            'numeroTemporada' => 'required|integer',
-            'numeroEpisodio' => 'required|integer',
+            'serieCapitulo' => 'required|exists:serie,id', // Validar que la serie seleccionada exista en la base de datos
+            'numeroTemporada' => 'required|numeric|min:0',
+            'numeroEpisodio' => 'required|numeric|min:0',
             'duracionCapitulo' => 'required|integer',
             'caratulaCapitulo' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048', // Ejemplo de validación de una imagen
             'linkCapitulo' => 'required|url',
