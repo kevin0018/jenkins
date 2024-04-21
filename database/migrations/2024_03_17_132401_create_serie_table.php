@@ -13,17 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('serie', function (Blueprint $table) {
+        Schema::create('series', function (Blueprint $table) {
             $table->id();
             $table->string('nombre');
-            $table->enum('genero',['Action', 'Comedy', 'Drama', 'Sci-fi', 'Fantasy']);
-            $table->integer('numero_temporadas'); // 
-
+            $table->enum('genero', ['Action', 'Comedy', 'Drama', 'Sci-fi', 'Fantasy']);
+            $table->integer('numero_temporadas');
             $table->text('sinopsis');
-            $table->integer('duracion_total'); // 
-
-
-                $table->text('caratula');
+            $table->integer('duracion_total');
+            $table->text('caratula');
             $table->timestamps();
         });
     }
@@ -35,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('serie');
+        Schema::dropIfExists('series');
     }
 };
