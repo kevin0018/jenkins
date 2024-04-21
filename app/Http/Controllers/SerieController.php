@@ -17,8 +17,7 @@ use App\Models\Serie;
             return view('cine.lista_serie', compact('series'));
         }   
       
-        public function store(Request $request)
-        {
+        public function store(Request $request) {
             // Validar los datos del formulario
             $request->validate([
                 'nombreSerie' => 'required|string|max:255',
