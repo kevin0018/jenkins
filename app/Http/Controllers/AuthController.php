@@ -10,7 +10,19 @@ class AuthController extends Controller
 {
     public function showLoginForm()
     {
-        return view('cine.login');
+        // Obtener el usuario autenticado
+        $user = Auth::user();
+
+        // Pasar los datos del usuario a la vista
+        return view('cine.login', compact('user'));
+    }
+
+    public function mostrarInformacionUsuario()
+    {
+        $user = Auth::user();
+
+        // Pasar los datos del usuario a la vista de información del usuario
+        return view('cine.datosUsuario', compact('user'));
     }
 
     public function authenticate(Request $request)

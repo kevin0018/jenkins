@@ -113,10 +113,17 @@
                     </div>
                 </form>
                 <!-- User Icon -->
-                <div class="input-group-prepend mx-2">
-                    <button class="btn btn-dark h-100" type="button">
-                        <a href="{{ route('cine_user_data') }}"><i class="fas fa-user"></i></a>
+                <div class="dropdown">
+                    <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-user"></i>
                     </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="{{ route('cine_user_data') }}">Perfil</a>
+                        <form action="{{ route('logout') }}" method="POST">
+                            @csrf
+                            <button type="submit" class="dropdown-item">Logout</button>
+                        </form>                    
+                    </div>
                 </div>
                 <!-- Logo -->
                 <img src="{{ URL::asset('/img/Jenkins_logo.png') }}" alt="LogoCine" class="navbar-brand mx-2"
