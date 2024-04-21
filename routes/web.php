@@ -136,6 +136,9 @@ Route::get('legal/compatible-devices', function() {
     Route::post('/guardar-capitulo', [CapituloController::class,'store'])->name('guardar_capitulo');
     //Guardar serie
 
-Route::post('/guardar-serie', [SerieController::class, 'store'])->name('guardar_serie');
-Route::get('/series/{serie}/capitulos', [SerieController::class, 'capitulos'])->name('serie_capitulos');
-Route::get('/series', [SerieController::class, 'index'])->name('cine_lista_series');
+    Route::post('/guardar-serie', [SerieController::class, 'store'])->name('guardar_serie');
+
+ });
+ Route::post('/guardar-serie', [SerieController::class, 'store'])->name('guardar_serie');
+ Route::get('/series/{serie}/capitulos', [SerieController::class, 'capitulos'])->name('serie_capitulos');
+ Route::get('/series', [SerieController::class, 'index'])->name('cine_lista_series');
