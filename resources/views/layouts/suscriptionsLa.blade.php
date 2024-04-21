@@ -125,42 +125,44 @@
         @yield('content')
     </main>
     <footer class="bg-warning text-black py-3">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h5>Preguntas frecuentes</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#">¿Qué es JenKins?</a></li>
-                        <li><a href="#">Dispositivos compatibles</a></li>
-                        <li><a href="#">Planes y precios</a></li>
-                    </ul>
+        <footer class="bg-warning text-black py-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5>Frequently Asked Questions</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="{{ route('what_is_jenkins')}}">What is Jenkins?</a></li>
+                            <li><a href="{{ route('compatible_devices')}}">Compatible Devices</a></li>
+                            <li><a href="{{ route('cine_suscriptions')}}">Plans and Pricing</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h5>Help Center</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Account Issues</a></li>
+                            <li><a href="#">Account Settings</a></li>
+                            <li><a href="#">Profiles</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h5>Contact Us</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">info@jenkins.com</a></li>
+                            <li><a href="#">+34 993302530</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="col-md-3">
-                    <h5>Centro de ayuda</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#">Problemas con la cuenta</a></li>
-                        <li><a href="#">Configuración de la  cuenta</a></li>
-                        <li><a href="#">Perfiles</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3">
-                    <h5>Contáctanos</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#">info@jenkins.com</a></li>
-                        <li><a href="#">+34 993302530</a></li>
-                    </ul>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="mb-0"><a href="{{ route('cine_terms_of_use')}}">Terms of Use</a> | <a href="{{ route('cine_privacy_policy')}}">Privacy Policy</a></p>
+                    </div>
+                    <div class="col-md-6 text-md-right">
+                        <p class="mb-0">© {{ date('Y') }} All rights reserved</p>
+                    </div>
                 </div>
             </div>
-            <hr>
-            <div class="row">
-                <div class="col-md-6">
-                    <p class="mb-0"><a href="{{ route('cine_terms_of_use')}}">Terms of Use</a> | <a href="{{ route('cine_privacy_policy')}}">Privacy Policy</a></p>
-                </div>
-                <div class="col-md-6 text-md-right">
-                    <p class="mb-0">© {{ date('Y') }} Todos los derechos reservados</p>
-                </div>
-            </div>
-        </div>
+        </footer>
     </footer>
 </body>
 </html>

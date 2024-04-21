@@ -16,6 +16,15 @@
                     <input type="password" id="loginPassword" style="background-color:#FFFACD" name="password" class="form-control" placeholder="Password">
                 </div>
                 <div class="form-outline mb-4 text-center">
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
                     <button type="submit" class="btn btn-dark text-warning"><strong>LOG IN</strong></button>
                 </div>
             </form>

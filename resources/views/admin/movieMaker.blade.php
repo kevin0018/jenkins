@@ -1,4 +1,4 @@
-    @extends('layouts.suscriptionsLa')
+    @extends('layouts.admin_layout')
     @section('title', 'Admin Maker')
 
     @section('content')

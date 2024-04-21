@@ -15,14 +15,13 @@
     <style>
         body {
             margin: 0;
-            padding-bottom: 100px;
             min-height: 100vh;
             font-family: Arial, sans-serif;
             background-image: url('https://i.pinimg.com/originals/10/b1/ba/10b1bad21f79df5f462c1c09f12db6ff.jpg');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
-            overflow-y: hidden;
+
         }
 
         header {
@@ -31,14 +30,13 @@
             padding: 20px;
             text-align: center;
             width: 100%;
-            position: fixed;
             top: 0;
             z-index: 1000;
         }
 
         main {
             margin: 2%;
-            padding: 6%;
+            padding: 2%;
             color: #fff; /* Color de texto blanco para mayor contraste */
             margin-top: 30px; /* Ajustar el espacio para evitar que el contenido se solape con el encabezado fijo */
         }
@@ -58,9 +56,7 @@
             text-align: center;
             padding: 10px;
             width: 100%;
-            position: fixed; /* Para fijar el pie de página en la parte inferior */
             bottom: 0; /* Fijar el pie de página en la parte inferior */
-            z-index: 1000; /* Asegurar que el pie de página esté sobre otros elementos */
         }
 
         footer a {
