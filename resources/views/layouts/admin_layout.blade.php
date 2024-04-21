@@ -15,9 +15,10 @@
 
         main {
             background-color: rgb(12, 12, 12);
-            box-shadow: 0px 5px 10px rgba(241, 206, 3, 0.8);
-            margin: 0 10%;
+            box-shadow: 2px 5px 10px rgba(241, 206, 3, 0.8);
+            margin: 5% 10%;
             padding: 20px;
+            border-radius: 20px;
         }
 
         span {
@@ -62,14 +63,22 @@
                 </a>
             </div>
            
-            <div>
-                <a href="{{route('cine_login')}}" class="btn btn-dark text-warning text-decoration-none">Log in</a>
-                <a href="{{route('cine_registro')}}"class="btn btn-dark text-warning text-decoration-none">Register</a>
-
+            <div class="dropdown">
+                <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-user"></i>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="{{ route('cine_user_data') }}">Perfil</a>
+                    <form action="{{ route('logout') }}" method="POST">
+                        @csrf
+                        <button type="submit" class="dropdown-item">Logout</button>
+                    </form>                    
+                </div>
             </div>
+            
+            
         </div>
     </header>
-
     <!-- Contenido de la página de inicio -->
     <main class="mx-auto py-5 text-white" style="width: 85%;">
         @yield('content')
@@ -113,7 +122,8 @@
             </div>
         </div>
     </footer>
-    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 
 </body>
 

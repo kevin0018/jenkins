@@ -104,9 +104,9 @@
                 <div class="col-md-6">
                     <h5>Frequently Asked Questions</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#">What is Jenkins?</a></li>
-                        <li><a href="#">Compatible Devices</a></li>
-                        <li><a href="#">Plans and Pricing</a></li>
+                        <li><a href="{{ route('what_is_jenkins')}}">What is Jenkins?</a></li>
+                        <li><a href="{{ route('compatible_devices')}}">Compatible Devices</a></li>
+                        <li><a href="{{ route('cine_suscriptions')}}">Plans and Pricing</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3">
