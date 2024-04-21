@@ -77,10 +77,10 @@
                     <h2 class="jumbotron text-center text-danger">FILL DATA OF NEW SERIE</h2>
                     <!--Name -->
                     <label for="sinospsiSerie" class="text-warning">Name of Serie: </label> <br>
-                    <input type="text" name="nameMedia" id="nameSerie" placeholder="Name of Serie">
+                    <input type="text" name="nombreSerie" id="nameSerie" placeholder="Name of Serie">
                     <!--Genre-->
                     <label for="generoSerie" class="text-warning" style="margin-left:50px">Genre: </label>
-                    <select name="generoMedia" id="generoSerie">
+                    <select name="generoSerie" id="generoSerie">
                         <option value="dummy" disabled selected>Choose a genre</option>
                         <option value="Action">Action</option>
                         <option value="Comedy">Comedy</option>
