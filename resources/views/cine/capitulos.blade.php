@@ -4,6 +4,8 @@
 
 @section('content')
     <h1>{{ $serie->nombre }}</h1>
+    <h3>id: {{ $serie->id }}</h3>
+
 
     <h2>Capítulos</h2>
     <ul>
