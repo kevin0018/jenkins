@@ -97,8 +97,12 @@
                         <a href="{{ route('cine_home_user') }}" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ route('cine_lista_peliculas') }}" class="nav-link">Media List</a>
+                        <a href="{{ route('cine_lista_peliculas') }}" class="nav-link">Films List</a>
                     </li>
+                    <li class="nav-item">
+    <a href="{{ route('cine_lista_series') }}" class="nav-link">Series List</a>
+</li>
+
                 </ul>
             </nav>
 
