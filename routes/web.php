@@ -30,14 +30,17 @@ Route::get('Jenkins', function () {
     return view('cine.home');
 })->name('cine_home');
 
-//INICIO
-Route::get('home', function() {
-    return view('cine.inicio');
-})->name('cine_home_user');
+// Rutas protegidas por autenticación
+Route::middleware(['auth'])->group(function () {
+    // Home user
+    Route::get('home', function() {
+        return view('cine.inicio');
+    })->name('cine_home_user');
 
-Route::post('home', function() {
-    return view('cine.inicio');
-})->name('cine_home_p');
+    Route::post('home', function() {
+        return view('cine.inicio');
+    })->name('cine_home_p');
+});
 
 
 //LOGIN
@@ -55,19 +58,21 @@ Route::get('registro', function () {
     return view('cine.registro');
 })->name('cine_registro');
 
-Route::get('userData', function () {
-    return view('cine.datosUsuario');
-})->name('cine_user_data');
-
-//BUSQUEDA
-
-Route::get('search', [BusquedaController::class, 'buscar'])->name('cine_busqueda');
-
-Route::get('reproductor', 'App\Http\Controllers\ReproductorController@index')->name('cine_reproductor');
 
 
-//LISTA PELICULAS
-Route::get('list', [MediaController::class, 'index'])->name('cine_lista_peliculas');
+Route::middleware(['auth'])->group(function () {
+    // Datos del usuario
+    Route::get('userData', [AuthController::class, 'mostrarInformacionUsuario'])->name('cine_user_data');
+
+    // Ruta de búsqueda
+    Route::get('search', [BusquedaController::class, 'buscar'])->name('cine_busqueda');
+    
+    // Ruta del reproductor
+    Route::get('reproductor', [ReproductorController::class, 'index'])->name('cine_reproductor');
+    
+    // Ruta de lista de películas
+    Route::get('list', [MediaController::class, 'index'])->name('cine_lista_peliculas');
+});
 
 //PASARELA DE PAGO
 Route::post('pasarelaPago', function () {

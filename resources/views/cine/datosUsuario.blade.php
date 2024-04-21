@@ -11,9 +11,9 @@
                 <div class="card-body">
                     <h3 class="card-title text-center">Personal Information</h3>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item"><strong>Name:</strong> John</li>
-                        <li class="list-group-item"><strong>Last Name:</strong> Doe</li>
-                        <li class="list-group-item"><strong>Address:</strong> 123 Fake Street</li>
+                        <li class="list-group-item"><strong>Name:</strong> {{ $user->name }}</li>
+                        <li class="list-group-item"><strong>Last Name:</strong> {{ $user->lastName }}</li>
+                        <li class="list-group-item"><strong>Email:</strong> {{ $user->email }}</li>
                         <li class="list-group-item"><strong>Payment Method:</strong> Credit Card</li>
                         <!-- Card number and password would be hidden -->
                         <li class="list-group-item" style="display: none;"><strong>Card Number:</strong> **** **** **** 1234</li>
