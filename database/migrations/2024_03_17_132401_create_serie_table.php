@@ -19,7 +19,6 @@ return new class extends Migration
             $table->enum('genero', ['Action', 'Comedy', 'Drama', 'Sci-fi', 'Fantasy']);
             $table->integer('numero_temporadas');
             $table->text('sinopsis');
-            $table->integer('duracion_total');
             $table->text('caratula');
             $table->timestamps();
         });

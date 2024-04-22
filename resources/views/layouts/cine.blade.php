@@ -72,6 +72,22 @@
             text-decoration: none;
             color: white;
         }
+        
+        .btn-capitulo {
+            background-color: yellow;
+            padding: 2%;
+            margin: 2%;
+
+        }
+
+        .btn-capitulo:hover {
+            background-color: rgb(194, 194, 37);
+        }
+
+        .a-capitulo:hover {
+            color: black;
+            text-decoration: none;
+        }
 
         footer a {
             text-decoration: none;
@@ -123,9 +139,9 @@
                         <i class="fas fa-user"></i>
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="{{ route('cine_user_data') }}">Perfil</a>
+                        <a class="dropdown-item" href="{{ route('cine_user_data') }}">Profile</a>
                         @if (Auth::user() && Auth::user()->isAdmin())
-                            <a class="dropdown-item" href="{{ route('admin_movie_maker_form') }}">Añadir Media</a>
+                            <a class="dropdown-item" href="{{ route('admin_movie_maker_form') }}">Add Media</a>
                         @endif
                         <form action="{{ route('logout') }}" method="POST">
                             @csrf

@@ -24,28 +24,19 @@ class CapituloController extends Controller {
         // Validación de los datos del formulario
         $request->validate([
             'nombreCapitulo' => 'required|string|max:255',
-            'serieCapitulo' => 'required|exists:series,id',
             'numeroTemporada' => 'required|numeric|min:0',
             'numeroEpisodio' => 'required|numeric|min:0',
             'duracionCapitulo' => 'required|integer',
-            'caratulaCapitulo' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
             'linkCapitulo' => 'required|url',
         ]);
 
         // Guarda el capítulo en la base de datos
         $capitulo = new Capitulo();
         $capitulo->nombre_capitulo = $request->nombreCapitulo;
-        $capitulo->serie_id = $request->serieCapitulo;
         $capitulo->numero_temporada = $request->numeroTemporada;
+        $capitulo->temporada_id = $request->numeroTemporada;
         $capitulo->numero_episodio = $request->numeroEpisodio;
         $capitulo->duracion = $request->duracionCapitulo;
-
-        // Procesar y guardar la imagen de la carátula
-        $nombrecapitulo = $request->nombre_capitulo;
-    
-        $caratulaPath = $request->file('caratulaCapitulo')->storeAs('public', $nombrecapitulo . '.' . $request->caratulaCapitulo->extension());
-        $caratula = str_replace('public/', '', $caratulaPath);
-        $capitulo->caratula = $caratula;
 
         // Extracción del ID de YouTube
         $youtubeId = $this->extractYoutubeId($request->input('linkCapitulo'));

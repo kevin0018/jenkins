@@ -62,10 +62,23 @@ use App\Models\Temporada;
 
             public function show($id)
             {
+                // Obtener la serie
                 $serie = Serie::findOrFail($id);
+
+                // Cargar todas las temporadas con sus capítulos
+                $serie->load('temporadas.capitulos');
+
+                // Obtener todos los capítulos de todas las temporadas de la serie
+                $capitulos = $serie->temporadas->flatMap->capitulos;
+
+                // Pasar también las temporadas a la vista
                 $temporadas = $serie->temporadas;
-                $capitulos = $serie->capitulos;;
-                return view('cine.capitulos', compact('serie','temporadas', 'capitulos'));
+
+                return view('cine.capitulos', [
+                    'capitulos' => $capitulos, 
+                    'serie' => $serie,
+                    'temporadas' => $temporadas,
+                ]);
             }
 
             public function getTemporadas(Serie $serie)
@@ -78,8 +91,8 @@ use App\Models\Temporada;
                     return response()->json($temporadas);
                 } catch (\Exception $e) {
                     // Manejar la excepción, por ejemplo, registrarla y devolver un mensaje de error
-                    \Log::error('Error al obtener temporadas: ' . $e->getMessage());
-                    return response()->json(['error' => 'Ocurrió un error al obtener las temporadas.'], 500);
+                    \Log::error('Error getting seasons: ' . $e->getMessage());
+                    return response()->json(['error' => 'An error occurred while fetching the seasons.'], 500);
                 }
             }
     

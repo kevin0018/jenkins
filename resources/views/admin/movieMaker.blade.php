@@ -48,7 +48,7 @@
                     <input type="text" class="form-control" id="titulo_medio" name="titulo_medio">
                 </div>
                 <div class="form-group">
-                    <label for="sinopsis" class="text-warning">Sinopsis:</label>
+                    <label for="sinopsis" class="text-warning">Synopsis:</label>
                     <textarea class="form-control" id="sinopsis" name="sinopsis"></textarea>
                 </div>
                 <div class="form-group">
@@ -106,13 +106,9 @@
                 <br>
                 <!--SINOPSIS -->
 
-                <label for="sinopsisSerie" class="text-warning" style="display: inline-block;">Sinopsis: </label>
+                <label for="sinopsisSerie" class="text-warning" style="display: inline-block;">Synopsis: </label>
                 <textarea name="sinopsisSerie" id="sinopsisSerie" style="height:auto; width:100%; vertical-align: top;"
                     placeholder="Sinopsis of the serie"></textarea>
-                <!--DURACIÓN TOTAL -->
-                <label for="duracionSerie" class="text-warning"> Total duration( in minutes): </label>
-                <input type="string" name="duracionSerie" id="duracionSerie"
-                    placeholder="Total duration in minutes "> &nbsp;
 
                 <!-- Cover Image -->
                 <div class="form-group">
@@ -135,19 +131,19 @@
                 <input type="text" class="form-control" id="nombreCapitulo" name="nombreCapitulo"
                     placeholder="Enter chapter name">
                 <!-- Serie a la que pertenece -->
-                <label for="serieCapitulo" class="text-warning">Series it belongs to:</label>
+                <label for="serieCapitulo" class="text-warning">Serie it belongs to:</label>
                 <select name="serieCapitulo" id="serieCapitulo" class="form-control">
-                    <option value="" disabled selected>Choose a series</option>
+                    <option value="" disabled selected>Choose a serie</option>
                     @foreach ($series as $serie)
                         <option value="{{ $serie->id }}">{{ $serie->nombre }}</option>
                     @endforeach
                 </select>
+                
                 <!-- Número de temporada -->
                 <label for="numeroTemporada" class="text-warning">Season number:</label>
                 <select class="form-control" id="numeroTemporada" name="numeroTemporada">
                     <option value="" disabled selected>Choose a season</option>
                 </select>
-
 
                 <!-- Número de episodio -->
                 <label for="numeroEpisodio" class="text-warning">Episode number:</label>
@@ -158,12 +154,6 @@
                 <label for="duracionCapitulo" class="text-warning">Chapter duration (in minutes):</label>
                 <input type="number" class="form-control" id="duracionCapitulo" name="duracionCapitulo"
                     placeholder="Enter chapter duration">
-
-                <!-- Cover Image -->
-                <div class="form-group">
-                    <label for="caratulaCapitulo" class="text-warning">Cover Image:</label>
-                    <input type="file" class="form-control-file" id="caratulaCapitulo" name="caratulaCapitulo">
-                </div>
 
                 <!-- Link -->
                 <div class="form-group">
@@ -177,7 +167,7 @@
             </div>
 
         </form>
-        
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script>
             document.querySelectorAll('input[name="typeMedia"]').forEach(function(radio) {
                 radio.addEventListener('change', function() {
@@ -201,26 +191,25 @@
                 });
             });
             $(document).ready(function() {
-            $('#serieCapitulo').change(function() {
-                var serieId = $(this).val();
-                $.ajax({
-                    url: '/series/' + serieId + '/temporadas',
-                    type: 'GET',
-                    success: function(response) {
-                        $('#numeroTemporada').empty();
-                        $.each(response, function(index, temporada) {
-                            $('#numeroTemporada').append($('<option>', {
-                                value: temporada.numero_temporada,
-                                text: 'Season ' + temporada.numero_temporada
-                            }));
-                        });
-                    },
-                    error: function(xhr, status, error) {
-                        console.error(error);
-                    }
-                });
+                $('#serieCapitulo').on( "change" , (function() {
+                    var serieId = $(this).val();
+                    $.ajax({
+                        url: '/series/' + serieId + '/temporadas',
+                        type: 'GET',
+                        success: function(response) {
+                            $('#numeroTemporada').empty();
+                            $.each(response, function(index, temporada) {
+                                $('#numeroTemporada').append($('<option>', {
+                                    value: temporada.numero_temporada,
+                                    text: 'Season ' + temporada.numero_temporada
+                                }));
+                            });
+                        },
+                        error: function(xhr, status, error) {
+                            console.error(error);
+                        }
+                    });
+                }));
             });
-        });
         </script>
 @endsection
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

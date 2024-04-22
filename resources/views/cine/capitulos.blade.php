@@ -9,6 +9,8 @@
             <img style="width: 350px;" src="{{ asset('storage/' . $serie->caratula) }}" alt="{{ $serie->nombre }}">
         </div>
         <div class="col-md-6">
+            <h2>Synopsis</h2>
+            <p>{{ $serie->sinopsis}}</p>
             <h2>Seasons</h2>
             <select id="temporadas" class="form-control">
                 @foreach($temporadas as $temporada)
@@ -17,8 +19,10 @@
             </select>
             <h2>Capítulos</h2>
             <ul id="capitulos">
-                @foreach($capitulos as $capitulo)
-                    <li class="temporada_{{ $capitulo->temporada_id }}" style="display: none;">{{ $capitulo->titulo }}</li>
+                @foreach ($capitulos as $capitulo)
+                    <a href="{{ route('cine_reproductor_capitulo', ['capitulo-id' => $capitulo->id]) }}" class="a-capitulo">
+                        <button class="btn btn-block btn-capitulo">{{ $capitulo->nombre_capitulo }}</button>
+                    </a>
                 @endforeach
             </ul>
         </div>

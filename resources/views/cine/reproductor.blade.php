@@ -3,20 +3,20 @@
 @section('content')
 <a href="{{ URL::previous() }}"> <button class="bg-danger text-warning " style=" font-size:20px;margin-left:2%; border: 1px solid white; box-shadow 0 0 10px  black; height:5%"><span >BACK</button></a>
 
-    <h1>Reproduciendo: {{ $pelicula_title }}</h1>
+    <h1>Playing: {{ $pelicula_title }}</h1>
     
     <div id="player" style="width: 100%; height: 500px;"></div>
 
     @if($pelicula)
-        <h2>Detalles de la película</h2>
+        <h2>Movie details</h2>
         <div class="table-responsive">
             <table class="table table-striped">
                 <thead>
                     <tr>
-                        <th>Título</th>
-                        <th>Género</th>
-                        <th>Duración</th>
-                        <th>Sinopsis</th>
+                        <th>Title</th>
+                        <th>Genre</th>
+                        <th>Duration</th>
+                        <th>Synopsis</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -30,7 +30,7 @@
             </table>
         </div>
     @else
-        <p>No se encontraron detalles de la película.</p>
+        <p>No details of the movie were found.</p>
     @endif
 
     <script>

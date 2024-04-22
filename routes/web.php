@@ -59,6 +59,7 @@ Route::get('registro', function () {
 })->name('cine_registro');
 
 
+// USER
 
 Route::middleware(['auth'])->group(function () {
     // Datos del usuario
@@ -67,8 +68,11 @@ Route::middleware(['auth'])->group(function () {
     // Ruta de búsqueda
     Route::get('search', [BusquedaController::class, 'buscar'])->name('cine_busqueda');
     
-    // Ruta del reproductor
+    // Ruta del reproductor para pelicula
     Route::get('reproductor', [ReproductorController::class, 'index'])->name('cine_reproductor');
+
+    // Reproductor para capitulo
+    Route::get('reproductor-capitulo', [ReproductorController::class, 'reproducirCapitulo'])->name('cine_reproductor_capitulo');
     
     // Ruta de lista de películas
     Route::get('list', [MediaController::class, 'index'])->name('cine_lista_peliculas');
@@ -143,6 +147,6 @@ Route::get('legal/compatible-devices', function() {
 
     Route::post('/guardar-serie', [SerieController::class, 'store'])->name('guardar_serie');
 
-    Route::get('/series/{serie}/temporadas', 'SerieController@getTemporadas');
+    Route::get('/series/{serie}/temporadas', [SerieController::class, 'getTemporadas'])->name('getTemporadas');
  });
  
