@@ -105,7 +105,7 @@
                 <br>
                 <br>
                 <!--SINOPSIS -->
-
+                
                 <label for="sinopsisSerie" class="text-warning" style="display: inline-block;">Synopsis: </label>
                 <textarea name="sinopsisSerie" id="sinopsisSerie" style="height:auto; width:100%; vertical-align: top;"
                     placeholder="Sinopsis of the serie"></textarea>
