@@ -201,9 +201,10 @@
                             $.each(response, function(index, temporada) {
                                 $('#numeroTemporada').append($('<option>', {
                                     value: temporada.numero_temporada,
-                                    text: 'Season ' + temporada.numero_temporada
+                                    text: temporada.numero_temporada
                                 }));
                             });
+                            
                         },
                         error: function(xhr, status, error) {
                             console.error(error);
