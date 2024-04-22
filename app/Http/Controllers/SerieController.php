@@ -67,11 +67,11 @@ use App\Models\Temporada;
                 $serie->load('temporadas.capitulos');
 
                 // Obtener todos los capítulos de todas las temporadas de la serie
-                $capitulos = $serie->temporadas->flatMap->capitulos;
+                $capitulos = $serie->temporadas->flatMap->capitulos->sortBy('temporada_id');
 
                 // Pasar también las temporadas a la vista
                 $temporadas = $serie->temporadas;
-
+                
                 return view('cine.capitulos', [
                     'capitulos' => $capitulos, 
                     'serie' => $serie,

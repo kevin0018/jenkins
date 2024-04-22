@@ -18,26 +18,28 @@
                 @endforeach
             </select>
             <h2>Capítulos</h2>
-            <ul id="capitulos">
+            <div id="capitulos-container">
                 @foreach ($capitulos as $capitulo)
-                    <a href="{{ route('cine_reproductor_capitulo', ['capitulo-id' => $capitulo->id]) }}" class="a-capitulo">
+                    <a href="{{ route('cine_reproductor_capitulo', ['capitulo-id' => $capitulo->id]) }}" class="a-capitulo" data-temporada-id="{{ $capitulo->temporada_id }}">
                         <button class="btn btn-block btn-capitulo">{{ $capitulo->nombre_capitulo }}</button>
                     </a>
                 @endforeach
-            </ul>
+            </div>
         </div>
     </div>
-@endsection
-
-@push('scripts')
     <script>
-        $(document).ready(function () {
-            $('#temporadas').change(function () {
-                var temporadaId = $(this).val();
-                $('#capitulos li').hide();
-                $('.temporada_' + temporadaId).show();
+        
+        document.getElementById('temporadas').addEventListener('change', function() {
+            var temporadaSeleccionada = this.value;
+            var botonesCapitulo = document.querySelectorAll('#capitulos-container .a-capitulo');
+
+            botonesCapitulo.forEach(function(btn) {
+                if (btn.dataset.temporadaId == temporadaSeleccionada || temporadaSeleccionada == 'todos') {
+                    btn.style.display = 'block';
+                } else {
+                    btn.style.display = 'none';
+                }
             });
         });
     </script>
-@endpush
-
+@endsection
