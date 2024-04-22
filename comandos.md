@@ -39,10 +39,9 @@ The first time you run this project you need to migrate and seed all the databas
 ./vendor/bin/sail php artisan make migration create_table_nomdelatabla   
 
 ./vendor/bin/sail php artisan migrate:fresh   
-./vendor/bin/sail  php artisan db:seed --class=MediaSeeder
+./vendor/bin/sail  php artisan db:seed --class=PeliculasTableSeeder
 ./vendor/bin/sail  php artisan db:seed --class=AdminUserSeeder
 ./vendor/bin/sail  php artisan db:seed --class=UserSeeder
-./vendor/bin/sail  php artisan db:seed --class=MediaSeeder 
 
 
 php artisan storage:link
@@ -59,15 +58,3 @@ select * from media; VER PELICULAS
 ## License
 
 The Laravel Tutorial was made by Dan Triano
-
-
-
-
-Listar series / pelis para editor -> Kevin
-Filtro buscador -> Kevin
-Abrir multimedia de series/peliculas -> Kevin
-vistas series -> Jonathans
-vistas peliculas -> favoritos informacion etc - Jonathan
-Log in -> Kevin
-
-subir cap, temporada, admin, no logeado no entrar en la pagina, buscador
