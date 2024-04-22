@@ -143,6 +143,6 @@ Route::get('legal/compatible-devices', function() {
 
     Route::post('/guardar-serie', [SerieController::class, 'store'])->name('guardar_serie');
 
-    Route::get('/series/{serieId}/temporadas', 'SerieController@getNumeroTemporadas')->name('series.temporadas');
+    Route::get('/series/{serie}/temporadas', 'SerieController@getTemporadas');
  });
  

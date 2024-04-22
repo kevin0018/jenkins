@@ -68,11 +68,19 @@ use App\Models\Temporada;
                 return view('cine.capitulos', compact('serie','temporadas', 'capitulos'));
             }
 
-            public function getNumeroTemporadas($serieId)
+            public function getTemporadas(Serie $serie)
             {
-                $serie = Serie::findOrFail($serieId);
-                $numeroTemporadas = $serie->numero_temporadas;
-                return response()->json(['numero_temporadas' => $numeroTemporadas]);
+                try {
+                    // Obtener todas las temporadas de la serie
+                    $temporadas = $serie->temporadas;
+            
+                    // Devolver las temporadas como respuesta JSON
+                    return response()->json($temporadas);
+                } catch (\Exception $e) {
+                    // Manejar la excepción, por ejemplo, registrarla y devolver un mensaje de error
+                    \Log::error('Error al obtener temporadas: ' . $e->getMessage());
+                    return response()->json(['error' => 'Ocurrió un error al obtener las temporadas.'], 500);
+                }
             }
     
 }

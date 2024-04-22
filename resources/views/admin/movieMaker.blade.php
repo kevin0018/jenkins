@@ -207,10 +207,7 @@
                     url: '/series/' + serieId + '/temporadas',
                     type: 'GET',
                     success: function(response) {
-                        // Limpiar el campo de número de temporada
                         $('#numeroTemporada').empty();
-
-                        // Llenar el campo de número de temporada con las temporadas disponibles
                         $.each(response, function(index, temporada) {
                             $('#numeroTemporada').append($('<option>', {
                                 value: temporada.numero_temporada,
@@ -224,7 +221,6 @@
                 });
             });
         });
-            
         </script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 @endsection
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
