@@ -1,25 +1,23 @@
 <?php
 
-// Modelo Capitulo corregido
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Capitulo extends Model
 {
-    use HasFactory;
+    protected $fillable = ['nombre_capitulo', 'numero_temporada', 'numero_episodio', 'link', 'duracion'];
 
-    protected $table = 'capitulo';
 
-    /**
-     * Define la relación de existencia con el modelo Serie.
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     */
     public function serie()
     {
         return $this->belongsTo(Serie::class);
     }
+
+    public function temporada()
+    {
+        return $this->belongsTo(Temporada::class, 'temporada_id');
+    }
 }
+
 

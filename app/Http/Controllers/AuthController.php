@@ -33,7 +33,7 @@ class AuthController extends Controller
             // Autenticación exitosa
             if (Auth::user()->isAdmin()) {
                 // Redirige al panel de control del administrador
-                return redirect()->route('admin_movie_maker');
+                return redirect()->route('admin_movie_maker_form');
             } else {
                 // Redirige a la página de inicio del usuario
                 return redirect()->route('cine_home_user');

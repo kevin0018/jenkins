@@ -136,12 +136,18 @@
                     placeholder="Enter chapter name">
                 <!-- Serie a la que pertenece -->
                 <label for="serieCapitulo" class="text-warning">Series it belongs to:</label>
-                <input type="number" class="form-control" id="serieCapitulo" name="serieCapitulo"
-                    placeholder="Enter series number">
+                <select name="serieCapitulo" id="serieCapitulo" class="form-control">
+                    <option value="" disabled selected>Choose a series</option>
+                    @foreach ($series as $serie)
+                        <option value="{{ $serie->id }}">{{ $serie->nombre }}</option>
+                    @endforeach
+                </select>
                 <!-- Número de temporada -->
                 <label for="numeroTemporada" class="text-warning">Season number:</label>
-                <input type="number" class="form-control" id="numeroTemporada" name="numeroTemporada"
-                    placeholder="Enter season number">
+                <select class="form-control" id="numeroTemporada" name="numeroTemporada">
+                    <option value="" disabled selected>Choose a season</option>
+                </select>
+
 
                 <!-- Número de episodio -->
                 <label for="numeroEpisodio" class="text-warning">Episode number:</label>
@@ -194,14 +200,31 @@
                     }
                 });
             });
-            var seasons = document.getElementById("seasons");
-            var customSeasons = document.getElementById("customSeason");
-            seasons.addEventListener("change", function() {
-                if (seasons.value === 'other') {
-                    customSeasons.style.display = 'block';
-                } else {
-                    customSeasons.style.display = 'none';
-                }
+            $(document).ready(function() {
+            $('#serieCapitulo').change(function() {
+                var serieId = $(this).val();
+                $.ajax({
+                    url: '/series/' + serieId + '/temporadas',
+                    type: 'GET',
+                    success: function(response) {
+                        // Limpiar el campo de número de temporada
+                        $('#numeroTemporada').empty();
+
+                        // Llenar el campo de número de temporada con las temporadas disponibles
+                        $.each(response, function(index, temporada) {
+                            $('#numeroTemporada').append($('<option>', {
+                                value: temporada.numero_temporada,
+                                text: 'Season ' + temporada.numero_temporada
+                            }));
+                        });
+                    },
+                    error: function(xhr, status, error) {
+                        console.error(error);
+                    }
+                });
             });
+        });
+            
         </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 @endsection

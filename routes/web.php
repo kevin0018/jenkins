@@ -72,6 +72,12 @@ Route::middleware(['auth'])->group(function () {
     
     // Ruta de lista de películas
     Route::get('list', [MediaController::class, 'index'])->name('cine_lista_peliculas');
+    
+    // Ruta de series
+    Route::get('/series', [SerieController::class, 'index'])->name('cine_lista_series');
+
+    // Ruta de capitulos
+    Route::get('/series/{id}', [SerieController::class, 'show'])->name('serie_show');
 });
 
 //PASARELA DE PAGO
@@ -119,13 +125,12 @@ Route::get('legal/compatible-devices', function() {
 //Make movie/media
 
  Route::middleware(['auth', 'admin'])->group(function () {
+    Route::get('admin/movieMaker', [CapituloController::class, 'create'])->name('admin_movie_maker_form');
+    
+    // Procesar los datos del formulario de movieMaker
     Route::post('admin/movieMaker', function () {
         return view('admin.movieMaker');
-    })->name('admin_movie_maker');
-
-    Route::get('admin/movieMaker', function () {
-        return view('admin.movieMaker');
-    })->name('admin_movie_maker');
+    })->name('admin_movie_maker_submit');
 
     //Guardar Pelicula
 
@@ -138,7 +143,6 @@ Route::get('legal/compatible-devices', function() {
 
     Route::post('/guardar-serie', [SerieController::class, 'store'])->name('guardar_serie');
 
+    Route::get('/series/{serieId}/temporadas', 'SerieController@getNumeroTemporadas')->name('series.temporadas');
  });
- Route::post('/guardar-serie', [SerieController::class, 'store'])->name('guardar_serie');
- Route::get('/series/{serie}/capitulos', [SerieController::class, 'capitulos'])->name('serie_capitulos');
- Route::get('/series', [SerieController::class, 'index'])->name('cine_lista_series');
+ 

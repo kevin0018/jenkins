@@ -13,16 +13,17 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('capitulo', function (Blueprint $table) {
+        Schema::create('capitulos', function (Blueprint $table) {
             $table->id();
             $table->string('nombre_capitulo');
-            $table->string('caratula')->nullable(); // Cambiado a tipo string
+            $table->string('caratula')->nullable(); 
             $table->unsignedBigInteger('serie_id');
             $table->foreign('serie_id')->references('id')->on('series');
+            $table->foreignId('temporada_id')->constrained('temporadas')->onDelete('cascade');
             $table->integer('numero_temporada');
             $table->integer('numero_episodio');
             $table->string('link');
-            $table->integer('duracion'); // Duración del capítulo en minutos
+            $table->integer('duracion'); 
             $table->timestamps();
         });
     }
@@ -34,6 +35,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('capitulo');
+        Schema::dropIfExists('capitulos');
     }
 };

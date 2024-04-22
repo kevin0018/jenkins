@@ -13,7 +13,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 
-    <link rel="icon" type="image/png" href="{{ 'img/Jenkins_logo.png' }}">
+    <link rel="icon" type="image/png" href="{{ asset('img/Jenkins_logo.png') }}">
 
     <style>
         .nav-link {
@@ -72,7 +72,7 @@
             text-decoration: none;
             color: white;
         }
-        
+
         footer a {
             text-decoration: none;
             color: black;
@@ -100,8 +100,8 @@
                         <a href="{{ route('cine_lista_peliculas') }}" class="nav-link">Films List</a>
                     </li>
                     <li class="nav-item">
-    <a href="{{ route('cine_lista_series') }}" class="nav-link">Series List</a>
-</li>
+                        <a href="{{ route('cine_lista_series') }}" class="nav-link">Series List</a>
+                    </li>
 
                 </ul>
             </nav>
@@ -118,20 +118,21 @@
                 </form>
                 <!-- User Icon -->
                 <div class="dropdown">
-                    <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fas fa-user"></i>
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <a class="dropdown-item" href="{{ route('cine_user_data') }}">Perfil</a>
-                        @if(Auth::user() && Auth::user()->isAdmin())
-                            <a class="dropdown-item" href="{{ route('admin_movie_maker') }}">Añadir Media</a>
+                        @if (Auth::user() && Auth::user()->isAdmin())
+                            <a class="dropdown-item" href="{{ route('admin_movie_maker_form') }}">Añadir Media</a>
                         @endif
                         <form action="{{ route('logout') }}" method="POST">
                             @csrf
                             <button type="submit" class="dropdown-item">Logout</button>
-                        </form>                    
+                        </form>
                     </div>
-                </div>          
+                </div>
                 <!-- Logo -->
                 <img src="{{ URL::asset('/img/Jenkins_logo.png') }}" alt="LogoCine" class="navbar-brand mx-2"
                     width="120px" style="filter: drop-shadow(0 0 10px rgba(0, 0, 0, .8))">
@@ -149,9 +150,9 @@
                 <div class="col-md-6">
                     <h5>Frequently Asked Questions</h5>
                     <ul class="list-unstyled">
-                        <li><a href="{{ route('what_is_jenkins')}}">What is Jenkins?</a></li>
-                        <li><a href="{{ route('compatible_devices')}}">Compatible Devices</a></li>
-                        <li><a href="{{ route('cine_suscriptions')}}">Plans and Pricing</a></li>
+                        <li><a href="{{ route('what_is_jenkins') }}">What is Jenkins?</a></li>
+                        <li><a href="{{ route('compatible_devices') }}">Compatible Devices</a></li>
+                        <li><a href="{{ route('cine_suscriptions') }}">Plans and Pricing</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3">
@@ -173,7 +174,8 @@
             <hr>
             <div class="row">
                 <div class="col-md-6">
-                    <p class="mb-0"><a href="{{ route('cine_terms_of_use')}}">Terms of Use</a> | <a href="{{ route('cine_privacy_policy')}}">Privacy Policy</a></p>
+                    <p class="mb-0"><a href="{{ route('cine_terms_of_use') }}">Terms of Use</a> | <a
+                            href="{{ route('cine_privacy_policy') }}">Privacy Policy</a></p>
                 </div>
                 <div class="col-md-6 text-md-right">
                     <p class="mb-0">© {{ date('Y') }} All rights reserved</p>

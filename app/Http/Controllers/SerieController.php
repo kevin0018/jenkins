@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Serie;
-
+use App\Models\Capitulo;
+use App\Models\Temporada;
 
     class SerieController extends Controller
     {
@@ -22,17 +23,17 @@ use App\Models\Serie;
             $request->validate([
                 'nombreSerie' => 'required|string|max:255',
                 'generoSerie' => 'required|string|max:255',
-                'seasons' => 'required|integer',
+                'seasons' => 'required|integer|min:1',
                 'sinopsisSerie' => 'required|string',
-                'duracionSerie' => 'required|integer',
+                'duracionSerie' => 'required|integer|min:1',
                 'caratulaSerie' => 'required|image|max:2048',
             ]);
+        
             // Procesar y guardar la imagen de la carátula
             $nombreSerie = $request->nombreSerie;
-    
             $caratulaPath = $request->file('caratulaSerie')->storeAs('public', $nombreSerie . '.' . $request->caratulaSerie->extension());
             $caratula = str_replace('public/', '', $caratulaPath);
-    
+        
             // Crear una nueva instancia del modelo Serie y asignar los datos
             $serie = new Serie();
             $serie->nombre = $nombreSerie; 
@@ -41,21 +42,37 @@ use App\Models\Serie;
             $serie->sinopsis = $request->sinopsisSerie;
             $serie->duracion_total = $request->duracionSerie;
             $serie->caratula = $caratula;
-    
+        
             // Guardar la serie en la base de datos
             $serie->save();
-    
+        
+            // Crear y guardar las temporadas asociadas con la serie
+            for ($i = 1; $i <= $request->seasons; $i++) {
+                $temporada = new Temporada();
+                $temporada->nombre = 'Temporada ' . $i;
+                $temporada->numero_temporada = $i;
+                // Asociar la temporada con la serie
+                $serie->temporadas()->save($temporada);
+            }
+        
             // Redireccionar a la página de inicio u otra página
-            return redirect()->route('cine_home_p')->with('success', '¡La serie se ha creado correctamente!');               }
+            return redirect()->route('cine_home_p')->with('success', 'The series has been successfully created!');              
+        }
 
 
-            public function capitulos(Serie $serie)
+            public function show($id)
             {
-                // Obtener los capítulos de la serie seleccionada
-                $capitulos = Capitulo::where('serie_id', $serie->id)->get();
-                
-                // Pasar los datos de la serie y los capítulos a la vista
-                return view('series.capitulos', compact('serie', 'capitulos'));
+                $serie = Serie::findOrFail($id);
+                $temporadas = $serie->temporadas;
+                $capitulos = $serie->capitulos;;
+                return view('cine.capitulos', compact('serie','temporadas', 'capitulos'));
+            }
+
+            public function getNumeroTemporadas($serieId)
+            {
+                $serie = Serie::findOrFail($serieId);
+                $numeroTemporadas = $serie->numero_temporadas;
+                return response()->json(['numero_temporadas' => $numeroTemporadas]);
             }
     
 }
