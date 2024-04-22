@@ -1,4 +1,4 @@
 *
-!/public/*
+!/public/
 !.gitignore
-!/public/movie_poster/*
+!/public/movie_poster/
