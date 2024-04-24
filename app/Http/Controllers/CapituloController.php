@@ -33,7 +33,6 @@ class CapituloController extends Controller {
         // Guarda el capítulo en la base de datos
         $capitulo = new Capitulo();
         $capitulo->nombre_capitulo = $request->nombreCapitulo;
-        $capitulo->numero_temporada = $request->numeroTemporada;
         $capitulo->temporada_id = $request->numeroTemporada;
         $capitulo->numero_episodio = $request->numeroEpisodio;
         $capitulo->duracion = $request->duracionCapitulo;

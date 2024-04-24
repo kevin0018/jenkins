@@ -25,7 +25,6 @@ use App\Models\Temporada;
                 'generoSerie' => 'required|string|max:255',
                 'seasons' => 'required|integer|min:1',
                 'sinopsisSerie' => 'required|string',
-                'duracionSerie' => 'required|integer|min:1',
                 'caratulaSerie' => 'required|image|max:2048',
             ]);
         
@@ -40,7 +39,6 @@ use App\Models\Temporada;
             $serie->genero = $request->generoSerie;
             $serie->numero_temporadas = $request->seasons;
             $serie->sinopsis = $request->sinopsisSerie;
-            $serie->duracion_total = $request->duracionSerie;
             $serie->caratula = $caratula;
         
             // Guardar la serie en la base de datos
@@ -69,11 +67,11 @@ use App\Models\Temporada;
                 $serie->load('temporadas.capitulos');
 
                 // Obtener todos los capítulos de todas las temporadas de la serie
-                $capitulos = $serie->temporadas->flatMap->capitulos;
+                $capitulos = $serie->temporadas->flatMap->capitulos->sortBy('temporada_id');
 
                 // Pasar también las temporadas a la vista
                 $temporadas = $serie->temporadas;
-
+                
                 return view('cine.capitulos', [
                     'capitulos' => $capitulos, 
                     'serie' => $serie,

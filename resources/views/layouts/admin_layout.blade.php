@@ -85,7 +85,7 @@
         @yield('content')
     </main>
 
-    <footer class="bg-warning text-black py-3">
+    <footer class="bg-warning text-black py-3 fixed-bottom">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">

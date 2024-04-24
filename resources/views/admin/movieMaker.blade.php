@@ -105,7 +105,7 @@
                 <br>
                 <br>
                 <!--SINOPSIS -->
-
+                
                 <label for="sinopsisSerie" class="text-warning" style="display: inline-block;">Synopsis: </label>
                 <textarea name="sinopsisSerie" id="sinopsisSerie" style="height:auto; width:100%; vertical-align: top;"
                     placeholder="Sinopsis of the serie"></textarea>
@@ -201,9 +201,10 @@
                             $.each(response, function(index, temporada) {
                                 $('#numeroTemporada').append($('<option>', {
                                     value: temporada.numero_temporada,
-                                    text: 'Season ' + temporada.numero_temporada
+                                    text: temporada.numero_temporada
                                 }));
                             });
+                            
                         },
                         error: function(xhr, status, error) {
                             console.error(error);

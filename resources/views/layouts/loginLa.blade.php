@@ -82,7 +82,7 @@
         </main>
 
         <!-- Pie de página -->
-        <footer>
+        <footer class="fixed-bottom">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
