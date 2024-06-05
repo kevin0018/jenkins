@@ -10,8 +10,8 @@ class Actor extends Model
     protected $table = 'actor';
     use HasFactory;
 
-    public function movies()
+    public function media()
     {
-        return $this->belongsToMany(Movie::class, 'reparto');
+        return $this->belongsToMany(Media::class, 'reparto');
     }
 }

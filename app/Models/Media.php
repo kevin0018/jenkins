@@ -13,4 +13,9 @@ class Media extends Model
         // Filtrar las películas por la categoría especificada
         return Media::where('genero', $category)->get();
     }
+
+    public function actors()
+{
+    return $this->belongsToMany(Actor::class, 'reparto');
+}
 }

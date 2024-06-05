@@ -82,6 +82,11 @@ Route::middleware(['auth'])->group(function () {
 
     // Ruta de capitulos
     Route::get('/series/{id}', [SerieController::class, 'show'])->name('serie_show');
+
+    // Buscador
+    Route::get('/searcher', [BusquedaController::class, 'search'])->name('cine_searcher');
+    Route::get('/searchs', [BusquedaController::class, 'mostrarBuscador'])->name('cine_search');
+
 });
 
 //PASARELA DE PAGO

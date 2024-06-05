@@ -118,6 +118,9 @@
                     <li class="nav-item">
                         <a href="{{ route('cine_lista_series') }}" class="nav-link">Series List</a>
                     </li>
+                    <li class="nav-item">
+                        <a href="{{ route('cine_search') }}" class="nav-link">Searcher</a>
+                    </li>
 
                 </ul>
             </nav>

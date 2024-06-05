@@ -6,7 +6,7 @@
     @foreach($series as $serie)      
                 <a href="{{ route('serie_show', $serie->id) }}">
                     <img src="{{ asset('storage/' . $serie->caratula) }}" alt="{{ $serie->nombre }}">
-                    <p>{{ $serie->nombre }}</p>
+                    <p>{{ $serie->nombre }} ({{$serie->genero}})</p>
                 </a>
         
     @endforeach
