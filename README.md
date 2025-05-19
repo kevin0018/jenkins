@@ -34,7 +34,7 @@ admin@jenkins.com : admin
 ### 1. Clona el repositorio y accede a la carpeta del proyecto
 
 ```bash
-git clone https://github.com/tuusuario/tu-repo-laravel.git
+git clone https://github.com/kevin0018/jenkins.git
 cd tu-repo-laravel
 ```
 
