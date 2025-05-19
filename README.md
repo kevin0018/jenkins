@@ -35,7 +35,7 @@ admin@jenkins.com : admin
 
 ```bash
 git clone https://github.com/kevin0018/jenkins.git
-cd tu-repo-laravel
+cd jenkins
 ```
 
 ### 2. Ejecuta el script de instalación
